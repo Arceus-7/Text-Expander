@@ -12,10 +12,10 @@ import (
 	"github.com/getlantern/systray"
 	"github.com/go-vgo/robotgo"
 
-	"github.com/yourusername/text-expander/config"
-	"github.com/yourusername/text-expander/expander"
-	"github.com/yourusername/text-expander/gui"
-	"github.com/yourusername/text-expander/utils"
+	"text-expander/config"
+	"text-expander/expander"
+	"text-expander/gui"
+	"text-expander/utils"
 )
 
 const version = "0.1.0"
@@ -50,6 +50,9 @@ func defaultLogPath() string {
 }
 
 func onReady(exp *expander.Expander, cfg *config.Config, logger *utils.Logger) {
+	// Load custom icon if available
+	loadIcon()
+
 	systray.SetTitle("Text Expander")
 	systray.SetTooltip("Text Expander")
 
@@ -175,6 +178,31 @@ func openLogFile(path string) {
 func showAbout() {
 	msg := "Text Expander\n" +
 		"Version " + version + "\n\n" +
-		"https://github.com/yourusername/text-expander"
+		"Text Expander - A productivity tool"
 	robotgo.Alert("About Text Expander", msg)
+}
+
+func loadIcon() {
+	// Try to load custom icon
+	iconPath := "app-icon.ico"
+	if _, err := os.Stat(iconPath); err == nil {
+		// Icon file exists, load it
+		if iconData, err := os.ReadFile(iconPath); err == nil {
+			systray.SetIcon(iconData)
+			log.Printf("Loaded custom icon from %s", iconPath)
+			return
+		}
+	}
+
+	// Fallback: try PNG icon
+	iconPath = "app-icon.png"
+	if _, err := os.Stat(iconPath); err == nil {
+		if iconData, err := os.ReadFile(iconPath); err == nil {
+			systray.SetIcon(iconData)
+			log.Printf("Loaded custom icon from %s (PNG)", iconPath)
+			return
+		}
+	}
+
+	log.Printf("No custom icon found, using default")
 }

@@ -9,8 +9,8 @@ import (
 
 	"github.com/go-vgo/robotgo"
 
-	"github.com/yourusername/text-expander/config"
-	"github.com/yourusername/text-expander/utils"
+	"text-expander/config"
+	"text-expander/utils"
 )
 
 // Expansion is an alias to the config-level Expansion type for convenience.

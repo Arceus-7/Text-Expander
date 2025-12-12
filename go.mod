@@ -1,4 +1,4 @@
-module github.com/yourusername/text-expander
+module text-expander
 
 go 1.24.0
 

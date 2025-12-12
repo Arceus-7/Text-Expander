@@ -16,7 +16,7 @@ import (
 	"fyne.io/fyne/v2/storage"
 	"fyne.io/fyne/v2/widget"
 
-	"github.com/yourusername/text-expander/config"
+	"text-expander/config"
 )
 
 type editorState struct {

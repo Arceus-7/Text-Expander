@@ -1,0 +1,57 @@
+# Compiled binaries
+*.exe
+!TextExpander.exe
+!main.exe
+
+# Build artifacts
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# MinGW-w64 toolchain directories (do not upload to GitHub)
+bin/
+lib/
+include/
+libexec/
+share/
+gdb32/
+gdb64/
+x86_64-w64-mingw32/
+__installer/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/*.log
+!logs/.gitkeep
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Icon source files
+*.jfif
+*.png
+!app-icon.png
+!app-icon.ico
+
+# Keep app icons
+!app-icon.ico
+!app-icon.png

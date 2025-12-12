@@ -31,18 +31,6 @@
       "description": "Email signature"
     },
     {
-      "trigger": ";shrug",
-      "replacement": "¯\\_(ツ)_/¯",
-      "case_sensitive": false,
-      "description": "Shrug emoji"
-    },
-    {
-      "trigger": ";clip",
-      "replacement": "{CLIPBOARD}",
-      "case_sensitive": false,
-      "description": "Paste clipboard content"
-    },
-    {
       "trigger": ";phone",
       "replacement": "8697731167",
       "case_sensitive": false,
@@ -71,6 +59,18 @@
       "replacement": "Sincerely,\nAbhronkosh Mondal",
       "case_sensitive": false,
       "description": "Sincerely closing"
+    },
+    {
+      "trigger": ";shrug",
+      "replacement": "¯\\_(ツ)_/¯",
+      "case_sensitive": false,
+      "description": "Shrug emoji"
+    },
+    {
+      "trigger": ";clip",
+      "replacement": "{CLIPBOARD}",
+      "case_sensitive": false,
+      "description": "Paste clipboard content"
     },
     {
       "trigger": ";br",
@@ -103,16 +103,592 @@
       "description": "WWW prefix"
     },
     {
-      "trigger": ";elina",
-      "replacement": "I LOVEEEE YOUUUUU SO MUCHHHHHHHHHHH <3 ",
-      "case_sensitive": false,
-      "description": "nothing lmao"
-    },
-    {
       "trigger": ";gmail",
       "replacement": "@gmail.com",
       "case_sensitive": false,
       "description": "Gmail domain"
+    },
+    {
+      "trigger": ";pydef",
+      "replacement": "def function_name():\n    pass",
+      "case_sensitive": false,
+      "description": "Python function template"
+    },
+    {
+      "trigger": ";pyclass",
+      "replacement": "class ClassName:\n    def __init__(self):\n        pass",
+      "case_sensitive": false,
+      "description": "Python class template"
+    },
+    {
+      "trigger": ";pymain",
+      "replacement": "if __name__ == '__main__':\n    ",
+      "case_sensitive": false,
+      "description": "Python main guard"
+    },
+    {
+      "trigger": ";pytry",
+      "replacement": "try:\n    \nexcept Exception as e:\n    print(f\"Error: {e}\")",
+      "case_sensitive": false,
+      "description": "Python try-except block"
+    },
+    {
+      "trigger": ";pyfor",
+      "replacement": "for item in items:\n    ",
+      "case_sensitive": false,
+      "description": "Python for loop"
+    },
+    {
+      "trigger": ";pyif",
+      "replacement": "if condition:\n    ",
+      "case_sensitive": false,
+      "description": "Python if statement"
+    },
+    {
+      "trigger": ";pywith",
+      "replacement": "with open('file.txt', 'r') as f:\n    content = f.read()",
+      "case_sensitive": false,
+      "description": "Python with statement"
+    },
+    {
+      "trigger": ";pylist",
+      "replacement": "[item for item in items if condition]",
+      "case_sensitive": false,
+      "description": "Python list comprehension"
+    },
+    {
+      "trigger": ";jsfunc",
+      "replacement": "function functionName() {\n    \n}",
+      "case_sensitive": false,
+      "description": "JavaScript function"
+    },
+    {
+      "trigger": ";jsarrow",
+      "replacement": "const functionName = () => {\n    \n};",
+      "case_sensitive": false,
+      "description": "JavaScript arrow function"
+    },
+    {
+      "trigger": ";jsasync",
+      "replacement": "async function functionName() {\n    try {\n        const result = await somePromise();\n        return result;\n    } catch (error) {\n        console.error(error);\n    }\n}",
+      "case_sensitive": false,
+      "description": "JavaScript async function"
+    },
+    {
+      "trigger": ";jspromise",
+      "replacement": "new Promise((resolve, reject) => {\n    \n});",
+      "case_sensitive": false,
+      "description": "JavaScript Promise"
+    },
+    {
+      "trigger": ";jstry",
+      "replacement": "try {\n    \n} catch (error) {\n    console.error(error);\n}",
+      "case_sensitive": false,
+      "description": "JavaScript try-catch"
+    },
+    {
+      "trigger": ";jsfor",
+      "replacement": "for (let i = 0; i < array.length; i++) {\n    \n}",
+      "case_sensitive": false,
+      "description": "JavaScript for loop"
+    },
+    {
+      "trigger": ";jsforeach",
+      "replacement": "array.forEach(item => {\n    \n});",
+      "case_sensitive": false,
+      "description": "JavaScript forEach"
+    },
+    {
+      "trigger": ";jsmap",
+      "replacement": "const newArray = array.map(item => {\n    return item;\n});",
+      "case_sensitive": false,
+      "description": "JavaScript map"
+    },
+    {
+      "trigger": ";jsfilter",
+      "replacement": "const filtered = array.filter(item => item.condition);",
+      "case_sensitive": false,
+      "description": "JavaScript filter"
+    },
+    {
+      "trigger": ";jsreduce",
+      "replacement": "const result = array.reduce((acc, item) => {\n    return acc + item;\n}, 0);",
+      "case_sensitive": false,
+      "description": "JavaScript reduce"
+    },
+    {
+      "trigger": ";jsimport",
+      "replacement": "import { component } from 'module';",
+      "case_sensitive": false,
+      "description": "JavaScript ES6 import"
+    },
+    {
+      "trigger": ";jsexport",
+      "replacement": "export default functionName;",
+      "case_sensitive": false,
+      "description": "JavaScript ES6 export"
+    },
+    {
+      "trigger": ";gofunc",
+      "replacement": "func functionName() {\n\t\n}",
+      "case_sensitive": false,
+      "description": "Go function"
+    },
+    {
+      "trigger": ";gostruct",
+      "replacement": "type StructName struct {\n\tField string\n}",
+      "case_sensitive": false,
+      "description": "Go struct"
+    },
+    {
+      "trigger": ";goerr",
+      "replacement": "if err != nil {\n\treturn err\n}",
+      "case_sensitive": false,
+      "description": "Go error handling"
+    },
+    {
+      "trigger": ";gofor",
+      "replacement": "for i := 0; i < n; i++ {\n\t\n}",
+      "case_sensitive": false,
+      "description": "Go for loop"
+    },
+    {
+      "trigger": ";gorange",
+      "replacement": "for index, value := range items {\n\t\n}",
+      "case_sensitive": false,
+      "description": "Go range loop"
+    },
+    {
+      "trigger": ";gogoroutine",
+      "replacement": "go func() {\n\t\n}()",
+      "case_sensitive": false,
+      "description": "Go goroutine"
+    },
+    {
+      "trigger": ";gochannel",
+      "replacement": "ch := make(chan Type)",
+      "case_sensitive": false,
+      "description": "Go channel"
+    },
+    {
+      "trigger": ";goselect",
+      "replacement": "select {\ncase msg := <-ch1:\n\t\ncase msg := <-ch2:\n\t\ndefault:\n\t\n}",
+      "case_sensitive": false,
+      "description": "Go select statement"
+    },
+    {
+      "trigger": ";godefer",
+      "replacement": "defer func() {\n\t\n}()",
+      "case_sensitive": false,
+      "description": "Go defer statement"
+    },
+    {
+      "trigger": ";cfunc",
+      "replacement": "void functionName() {\n    \n}",
+      "case_sensitive": false,
+      "description": "C function"
+    },
+    {
+      "trigger": ";cmain",
+      "replacement": "#include <stdio.h>\n\nint main() {\n    \n    return 0;\n}",
+      "case_sensitive": false,
+      "description": "C main function"
+    },
+    {
+      "trigger": ";cfor",
+      "replacement": "for (int i = 0; i < n; i++) {\n    \n}",
+      "case_sensitive": false,
+      "description": "C for loop"
+    },
+    {
+      "trigger": ";cwhile",
+      "replacement": "while (condition) {\n    \n}",
+      "case_sensitive": false,
+      "description": "C while loop"
+    },
+    {
+      "trigger": ";cif",
+      "replacement": "if (condition) {\n    \n}",
+      "case_sensitive": false,
+      "description": "C if statement"
+    },
+    {
+      "trigger": ";cstruct",
+      "replacement": "typedef struct {\n    int field;\n} StructName;",
+      "case_sensitive": false,
+      "description": "C struct definition"
+    },
+    {
+      "trigger": ";cswitch",
+      "replacement": "switch (variable) {\n    case value1:\n        break;\n    case value2:\n        break;\n    default:\n        break;\n}",
+      "case_sensitive": false,
+      "description": "C switch statement"
+    },
+    {
+      "trigger": ";cmalloc",
+      "replacement": "int *ptr = (int*)malloc(size * sizeof(int));\nif (ptr == NULL) {\n    // Handle allocation failure\n}\nfree(ptr);",
+      "case_sensitive": false,
+      "description": "C malloc/free pattern"
+    },
+    {
+      "trigger": ";cprintf",
+      "replacement": "printf(\"%d\\n\", variable);",
+      "case_sensitive": false,
+      "description": "C printf statement"
+    },
+    {
+      "trigger": ";cscanf",
+      "replacement": "scanf(\"%d\", &variable);",
+      "case_sensitive": false,
+      "description": "C scanf statement"
+    },
+    {
+      "trigger": ";cfile",
+      "replacement": "FILE *fp = fopen(\"filename.txt\", \"r\");\nif (fp == NULL) {\n    perror(\"Error opening file\");\n    return 1;\n}\n// Use file\nfclose(fp);",
+      "case_sensitive": false,
+      "description": "C file operations"
+    },
+    {
+      "trigger": ";pyboiler",
+      "replacement": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nModule description goes here.\n\"\"\"\n\nimport sys\nimport os\n\n\ndef main():\n    \"\"\"Main function.\"\"\"\n    pass\n\n\nif __name__ == '__main__':\n    main()",
+      "case_sensitive": false,
+      "description": "Python boilerplate with main"
+    },
+    {
+      "trigger": ";jsboiler",
+      "replacement": "/**\n * @file filename.js\n * @description File description\n * @author Your Name\n */\n\n'use strict';\n\n// Main logic\nfunction main() {\n    \n}\n\n// Execute if run directly\nif (require.main === module) {\n    main();\n}\n\nmodule.exports = { main };",
+      "case_sensitive": false,
+      "description": "JavaScript Node.js boilerplate"
+    },
+    {
+      "trigger": ";goboiler",
+      "replacement": "package main\n\nimport (\n\t\"fmt\"\n\t\"log\"\n\t\"os\"\n)\n\nfunc main() {\n\t// Your code here\n\tfmt.Println(\"Hello, World!\")\n}",
+      "case_sensitive": false,
+      "description": "Go program boilerplate"
+    },
+    {
+      "trigger": ";cboiler",
+      "replacement": "/**\n * @file main.c\n * @brief Brief description\n * @author Your Name\n * @date 2024\n */\n\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint main(int argc, char *argv[]) {\n    // Your code here\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+      "case_sensitive": false,
+      "description": "C program boilerplate"
+    },
+    {
+      "trigger": ";javaboiler",
+      "replacement": "/**\n * Main class description\n * @author Your Name\n */\npublic class Main {\n    /**\n     * Main method - entry point of the program\n     * @param args command line arguments\n     */\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+      "case_sensitive": false,
+      "description": "Java class boilerplate"
+    },
+    {
+      "trigger": ";tsboiler",
+      "replacement": "/**\n * @fileoverview File description\n * @author Your Name\n */\n\ninterface Config {\n    // Define your interfaces\n}\n\nclass Main {\n    constructor() {\n        // Initialize\n    }\n    \n    public run(): void {\n        console.log('Hello, World!');\n    }\n}\n\nconst app = new Main();\napp.run();",
+      "case_sensitive": false,
+      "description": "TypeScript boilerplate"
+    },
+    {
+      "trigger": ";html5",
+      "replacement": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body>\n    \n</body>\n</html>",
+      "case_sensitive": false,
+      "description": "HTML5 boilerplate"
+    },
+    {
+      "trigger": ";htmldiv",
+      "replacement": "<div class=\"\">\n    \n</div>",
+      "case_sensitive": false,
+      "description": "HTML div tag"
+    },
+    {
+      "trigger": ";htmllink",
+      "replacement": "<a href=\"\"></a>",
+      "case_sensitive": false,
+      "description": "HTML link tag"
+    },
+    {
+      "trigger": ";htmlimg",
+      "replacement": "<img src=\"\" alt=\"\">",
+      "case_sensitive": false,
+      "description": "HTML image tag"
+    },
+    {
+      "trigger": ";htmlbtn",
+      "replacement": "<button type=\"button\"></button>",
+      "case_sensitive": false,
+      "description": "HTML button tag"
+    },
+    {
+      "trigger": ";htmlinput",
+      "replacement": "<input type=\"text\" name=\"\" id=\"\">",
+      "case_sensitive": false,
+      "description": "HTML input tag"
+    },
+    {
+      "trigger": ";htmlform",
+      "replacement": "<form action=\"\" method=\"post\">\n    \n</form>",
+      "case_sensitive": false,
+      "description": "HTML form tag"
+    },
+    {
+      "trigger": ";cssflex",
+      "replacement": "display: flex;\njustify-content: center;\nalign-items: center;",
+      "case_sensitive": false,
+      "description": "CSS flexbox centering"
+    },
+    {
+      "trigger": ";cssgrid",
+      "replacement": "display: grid;\ngrid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\ngap: 1rem;",
+      "case_sensitive": false,
+      "description": "CSS grid layout"
+    },
+    {
+      "trigger": ";cssmedia",
+      "replacement": "@media (max-width: 768px) {\n    \n}",
+      "case_sensitive": false,
+      "description": "CSS media query"
+    },
+    {
+      "trigger": ";csstransition",
+      "replacement": "transition: all 0.3s ease;",
+      "case_sensitive": false,
+      "description": "CSS transition"
+    },
+    {
+      "trigger": ";cssanimation",
+      "replacement": "@keyframes animationName {\n    0% { }\n    100% { }\n}",
+      "case_sensitive": false,
+      "description": "CSS keyframe animation"
+    },
+    {
+      "trigger": ";sqlselect",
+      "replacement": "SELECT * FROM table_name WHERE condition;",
+      "case_sensitive": false,
+      "description": "SQL SELECT statement"
+    },
+    {
+      "trigger": ";sqlinsert",
+      "replacement": "INSERT INTO table_name (column1, column2) VALUES (value1, value2);",
+      "case_sensitive": false,
+      "description": "SQL INSERT statement"
+    },
+    {
+      "trigger": ";sqlupdate",
+      "replacement": "UPDATE table_name SET column1 = value1 WHERE condition;",
+      "case_sensitive": false,
+      "description": "SQL UPDATE statement"
+    },
+    {
+      "trigger": ";sqldelete",
+      "replacement": "DELETE FROM table_name WHERE condition;",
+      "case_sensitive": false,
+      "description": "SQL DELETE statement"
+    },
+    {
+      "trigger": ";sqljoin",
+      "replacement": "SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;",
+      "case_sensitive": false,
+      "description": "SQL JOIN statement"
+    },
+    {
+      "trigger": ";gitcommit",
+      "replacement": "feat: ",
+      "case_sensitive": false,
+      "description": "Git commit - feature"
+    },
+    {
+      "trigger": ";gitfix",
+      "replacement": "fix: ",
+      "case_sensitive": false,
+      "description": "Git commit - fix"
+    },
+    {
+      "trigger": ";gitdocs",
+      "replacement": "docs: ",
+      "case_sensitive": false,
+      "description": "Git commit - documentation"
+    },
+    {
+      "trigger": ";gitstyle",
+      "replacement": "style: ",
+      "case_sensitive": false,
+      "description": "Git commit - style"
+    },
+    {
+      "trigger": ";gitrefactor",
+      "replacement": "refactor: ",
+      "case_sensitive": false,
+      "description": "Git commit - refactor"
+    },
+    {
+      "trigger": ";gittest",
+      "replacement": "test: ",
+      "case_sensitive": false,
+      "description": "Git commit - test"
+    },
+    {
+      "trigger": ";gitchore",
+      "replacement": "chore: ",
+      "case_sensitive": false,
+      "description": "Git commit - chore"
+    },
+    {
+      "trigger": ";check",
+      "replacement": "✓",
+      "case_sensitive": false,
+      "description": "Check mark"
+    },
+    {
+      "trigger": ";cross",
+      "replacement": "✗",
+      "case_sensitive": false,
+      "description": "Cross mark"
+    },
+    {
+      "trigger": ";arrow",
+      "replacement": "→",
+      "case_sensitive": false,
+      "description": "Right arrow"
+    },
+    {
+      "trigger": ";arrowleft",
+      "replacement": "←",
+      "case_sensitive": false,
+      "description": "Left arrow"
+    },
+    {
+      "trigger": ";arrowup",
+      "replacement": "↑",
+      "case_sensitive": false,
+      "description": "Up arrow"
+    },
+    {
+      "trigger": ";arrowdown",
+      "replacement": "↓",
+      "case_sensitive": false,
+      "description": "Down arrow"
+    },
+    {
+      "trigger": ";star",
+      "replacement": "★",
+      "case_sensitive": false,
+      "description": "Star symbol"
+    },
+    {
+      "trigger": ";heart",
+      "replacement": "❤",
+      "case_sensitive": false,
+      "description": "Heart symbol"
+    },
+    {
+      "trigger": ";smile",
+      "replacement": "😊",
+      "case_sensitive": false,
+      "description": "Smile emoji"
+    },
+    {
+      "trigger": ";thumbsup",
+      "replacement": "👍",
+      "case_sensitive": false,
+      "description": "Thumbs up emoji"
+    },
+    {
+      "trigger": ";fire",
+      "replacement": "🔥",
+      "case_sensitive": false,
+      "description": "Fire emoji"
+    },
+    {
+      "trigger": ";rocket",
+      "replacement": "🚀",
+      "case_sensitive": false,
+      "description": "Rocket emoji"
+    },
+    {
+      "trigger": ";warning",
+      "replacement": "⚠️",
+      "case_sensitive": false,
+      "description": "Warning symbol"
+    },
+    {
+      "trigger": ";info",
+      "replacement": "ℹ️",
+      "case_sensitive": false,
+      "description": "Information symbol"
+    },
+    {
+      "trigger": ";bullet",
+      "replacement": "•",
+      "case_sensitive": false,
+      "description": "Bullet point"
+    },
+    {
+      "trigger": ";ellipsis",
+      "replacement": "…",
+      "case_sensitive": false,
+      "description": "Ellipsis"
+    },
+    {
+      "trigger": ";degree",
+      "replacement": "°",
+      "case_sensitive": false,
+      "description": "Degree symbol"
+    },
+    {
+      "trigger": ";copyright",
+      "replacement": "©",
+      "case_sensitive": false,
+      "description": "Copyright symbol"
+    },
+    {
+      "trigger": ";trademark",
+      "replacement": "™",
+      "case_sensitive": false,
+      "description": "Trademark symbol"
+    },
+    {
+      "trigger": ";registered",
+      "replacement": "®",
+      "case_sensitive": false,
+      "description": "Registered trademark symbol"
+    },
+    {
+      "trigger": ";lgtm",
+      "replacement": "Looks good to me! ✓",
+      "case_sensitive": false,
+      "description": "Code review - LGTM"
+    },
+    {
+      "trigger": ";needswork",
+      "replacement": "This needs some work before merging.",
+      "case_sensitive": false,
+      "description": "Code review - needs work"
+    },
+    {
+      "trigger": ";approved",
+      "replacement": "Approved and ready to merge! 🚀",
+      "case_sensitive": false,
+      "description": "Code review - approved"
+    },
+    {
+      "trigger": ";meeting",
+      "replacement": "Thank you all for joining today's meeting. Here are the key takeaways:\n\n- \n\nNext steps:\n- ",
+      "case_sensitive": false,
+      "description": "Meeting summary template"
+    },
+    {
+      "trigger": ";followup",
+      "replacement": "Following up on our previous conversation...",
+      "case_sensitive": false,
+      "description": "Follow-up email opening"
+    },
+    {
+      "trigger": ";schedule",
+      "replacement": "I'd like to schedule a meeting to discuss this further. When would be a good time for you?",
+      "case_sensitive": false,
+      "description": "Meeting request"
+    },
+    {
+      "trigger": ";elina",
+      "replacement": "I LOVEEEE YOUUUUU SO MUCHHHHHHHHHHH <3 ",
+      "case_sensitive": false,
+      "description": "for my lovely gf"
     }
   ],
   "settings": {
