@@ -1,0 +1,126 @@
+{
+  "expansions": [
+    {
+      "trigger": ";email",
+      "replacement": "subimal1974mondal@gmail.com",
+      "case_sensitive": false,
+      "description": "Personal email"
+    },
+    {
+      "trigger": ";date",
+      "replacement": "{DATE}",
+      "case_sensitive": false,
+      "description": "Current date"
+    },
+    {
+      "trigger": ";time",
+      "replacement": "{TIME}",
+      "case_sensitive": false,
+      "description": "Current time"
+    },
+    {
+      "trigger": ";dt",
+      "replacement": "{DATETIME}",
+      "case_sensitive": false,
+      "description": "Current date and time"
+    },
+    {
+      "trigger": ";sig",
+      "replacement": "Abhronkosh Mondal",
+      "case_sensitive": false,
+      "description": "Email signature"
+    },
+    {
+      "trigger": ";shrug",
+      "replacement": "¯\\_(ツ)_/¯",
+      "case_sensitive": false,
+      "description": "Shrug emoji"
+    },
+    {
+      "trigger": ";clip",
+      "replacement": "{CLIPBOARD}",
+      "case_sensitive": false,
+      "description": "Paste clipboard content"
+    },
+    {
+      "trigger": ";phone",
+      "replacement": "8697731167",
+      "case_sensitive": false,
+      "description": "Phone number"
+    },
+    {
+      "trigger": ";addr",
+      "replacement": "Adarshapally, Panihati, Kolkata, West Bengal, India",
+      "case_sensitive": false,
+      "description": "Address"
+    },
+    {
+      "trigger": ";thanks",
+      "replacement": "Thank you for your time and consideration.",
+      "case_sensitive": false,
+      "description": "Thank you message"
+    },
+    {
+      "trigger": ";regards",
+      "replacement": "Best regards,\nAbhronkosh Mondal",
+      "case_sensitive": false,
+      "description": "Best regards closing"
+    },
+    {
+      "trigger": ";sincerely",
+      "replacement": "Sincerely,\nAbhronkosh Mondal",
+      "case_sensitive": false,
+      "description": "Sincerely closing"
+    },
+    {
+      "trigger": ";br",
+      "replacement": "\n\n",
+      "case_sensitive": false,
+      "description": "Double line break"
+    },
+    {
+      "trigger": ";todo",
+      "replacement": "- [ ] ",
+      "case_sensitive": false,
+      "description": "Todo checkbox"
+    },
+    {
+      "trigger": ";done",
+      "replacement": "- [x] ",
+      "case_sensitive": false,
+      "description": "Completed todo checkbox"
+    },
+    {
+      "trigger": ";url",
+      "replacement": "https://",
+      "case_sensitive": false,
+      "description": "HTTPS URL prefix"
+    },
+    {
+      "trigger": ";www",
+      "replacement": "www.",
+      "case_sensitive": false,
+      "description": "WWW prefix"
+    },
+    {
+      "trigger": ";elina",
+      "replacement": "I LOVEEEE YOUUUUU SO MUCHHHHHHHHHHH <3 ",
+      "case_sensitive": false,
+      "description": "nothing lmao"
+    },
+    {
+      "trigger": ";gmail",
+      "replacement": "@gmail.com",
+      "case_sensitive": false,
+      "description": "Gmail domain"
+    }
+  ],
+  "settings": {
+    "enabled": true,
+    "trigger_on_space": true,
+    "trigger_on_tab": true,
+    "trigger_on_enter": true,
+    "show_notifications": false,
+    "log_expansions": true
+  }
+}
