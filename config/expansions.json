@@ -2,7 +2,7 @@
   "expansions": [
     {
       "trigger": ";email",
-      "replacement": "subimal1974mondal@gmail.com",
+      "replacement": "example@gmail.com",
       "case_sensitive": false,
       "description": "Personal email"
     },
@@ -26,19 +26,19 @@
     },
     {
       "trigger": ";sig",
-      "replacement": "Abhronkosh Mondal",
+      "replacement": "YOUR NAME",
       "case_sensitive": false,
       "description": "Email signature"
     },
     {
       "trigger": ";phone",
-      "replacement": "8697731167",
+      "replacement": "XXXXXXXXXX",
       "case_sensitive": false,
       "description": "Phone number"
     },
     {
       "trigger": ";addr",
-      "replacement": "Adarshapally, Panihati, Kolkata, West Bengal, India",
+      "replacement": "YOUR ADDRESSS",
       "case_sensitive": false,
       "description": "Address"
     },
@@ -50,13 +50,13 @@
     },
     {
       "trigger": ";regards",
-      "replacement": "Best regards,\nAbhronkosh Mondal",
+      "replacement": "Best regards,\nyour name",
       "case_sensitive": false,
       "description": "Best regards closing"
     },
     {
       "trigger": ";sincerely",
-      "replacement": "Sincerely,\nAbhronkosh Mondal",
+      "replacement": "Sincerely,\nyour name",
       "case_sensitive": false,
       "description": "Sincerely closing"
     },
