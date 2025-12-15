@@ -9,6 +9,8 @@ import (
 	"runtime"
 	"time"
 
+	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/app"
 	"github.com/getlantern/systray"
 	"github.com/go-vgo/robotgo"
 
@@ -19,6 +21,9 @@ import (
 )
 
 const version = "0.1.0"
+
+// Global Fyne app instance for GUI windows
+var fyneApp fyne.App
 
 func main() {
 	if err := os.MkdirAll("config", 0o755); err != nil {
@@ -37,6 +42,9 @@ func main() {
 	exp := expander.NewExpander(cfg)
 	logger := utils.NewLogger(defaultLogPath())
 	exp.SetLogger(logger)
+
+	// Initialize Fyne app before systray
+	fyneApp = app.NewWithID("com.textexpander.manager")
 
 	systray.Run(func() { onReady(exp, cfg, logger) }, func() { onExit(exp, logger) })
 }
@@ -88,9 +96,31 @@ func onReady(exp *expander.Expander, cfg *config.Config, logger *utils.Logger) {
 				toggleEnabled(cfg, toggleItem)
 				updateTrayTooltip(cfg)
 			case <-configureItem.ClickedCh:
-				// Run editor in a separate goroutine - it creates its own Fyne app
+				// Launch GUI as separate process
 				go func() {
-					gui.ShowEditor(cfg)
+					defer func() {
+						if r := recover(); r != nil {
+							log.Printf("Error launching GUI: %v", r)
+						}
+					}()
+
+					// Get executable directory
+					exePath, err := os.Executable()
+					if err != nil {
+						log.Printf("Failed to get executable path: %v", err)
+						robotgo.Alert("Error", "Failed to open configuration window")
+						return
+					}
+					exeDir := filepath.Dir(exePath)
+					guiPath := filepath.Join(exeDir, "gui-config.exe")
+
+					// Launch the separate GUI executable
+					cmd := exec.Command(guiPath)
+					cmd.Dir = exeDir // Set working directory
+					if err := cmd.Start(); err != nil {
+						log.Printf("Failed to launch GUI: %v", err)
+						robotgo.Alert("Error", fmt.Sprintf("Failed to open configuration window: %v", err))
+					}
 				}()
 			case <-statsItem.ClickedCh:
 				showStats(logger)
