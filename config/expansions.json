@@ -37,12 +37,6 @@
       "description": "Phone number"
     },
     {
-      "trigger": ";addr",
-      "replacement": "YOUR ADDRESS",
-      "case_sensitive": false,
-      "description": "Address"
-    },
-    {
       "trigger": ";thanks",
       "replacement": "Thank you for your time and consideration.",
       "case_sensitive": false,
@@ -311,12 +305,6 @@
       "replacement": "if (condition) {\n    \n}",
       "case_sensitive": false,
       "description": "C if statement"
-    },
-    {
-      "trigger": ";cstruct",
-      "replacement": "typedef struct {\n    int field;\n} StructName;",
-      "case_sensitive": false,
-      "description": "C struct definition"
     },
     {
       "trigger": ";cswitch",
@@ -647,6 +635,18 @@
       "replacement": "I LOVEEEE YOUUUUU SO MUCHHHHHHHHHHH \u003c3 ",
       "case_sensitive": false,
       "description": "for my lovely gf"
+    },
+    {
+      "trigger": ";cstruct",
+      "replacement": "typedef struct {\n    int field;\n} StructName;",
+      "case_sensitive": false,
+      "description": "C struct definition"
+    },
+    {
+      "trigger": ";addr",
+      "replacement": "YOUR ADDRESS",
+      "case_sensitive": false,
+      "description": "Address"
     }
   ],
   "custom_variables": {},
@@ -655,7 +655,7 @@
     "trigger_on_space": true,
     "trigger_on_tab": true,
     "trigger_on_enter": true,
-    "show_notifications": false,
+    "show_notifications": true,
     "log_expansions": true
   }
 }

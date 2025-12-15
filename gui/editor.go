@@ -76,17 +76,17 @@ func (s *editorState) initUI() {
 	newBtn.Importance = widget.HighImportance
 
 	// Help button
-	helpBtn := widget.NewButton("Help", func() {
+	helpBtn := widget.NewButton("?", func() {
 		ShowHelpDialog(s.window)
 	})
 	helpBtn.Importance = widget.LowImportance
 
-	// Top toolbar - search bar takes most space
+	// Top toolbar with generous spacing
 	toolbar := container.NewBorder(
 		nil, nil,
-		nil,
-		container.NewHBox(newBtn, helpBtn),
-		s.searchEntry, // Search bar fills remaining space
+		container.NewPadded(container.NewHBox(layout.NewSpacer())),
+		container.NewPadded(container.NewHBox(newBtn, helpBtn)),
+		container.NewPadded(s.searchEntry), // Search bar fills remaining space
 	)
 
 	// Create tab container
@@ -111,7 +111,8 @@ func (s *editorState) createExpansionsTab() *fyne.Container {
 	scroll := container.NewVScroll(s.expansionsContainer)
 	scroll.SetMinSize(fyne.NewSize(900, 500))
 
-	return container.NewBorder(nil, nil, nil, nil, scroll)
+	// Add padding around the scroll area for breathing room
+	return container.NewPadded(scroll)
 }
 
 func (s *editorState) createVariablesTab() *fyne.Container {

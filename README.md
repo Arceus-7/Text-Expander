@@ -1,62 +1,70 @@
 # Text Expander for Windows
 
-Lightweight text expansion tool that automatically replaces shortcuts with longer text snippets. Works across all applications.
+Lightweight text expansion tool that automatically replaces shortcuts with longer text snippets. Works across all applications with a modern GUI for easy management.
 
 ## Installation
 
-### Option 1: Installer (Recommended)
+### Installer (Recommended)
 
 1. Download `TextExpander-Setup-1.1.0.exe` from [Releases](https://github.com/Arceus-7/Text-Expander/releases)
-2. Run the installer
-3. Choose installation options:
-   - Start automatically with Windows (recommended)
+2. Run the installer and choose options:
+   - Start automatically with Windows
    - Desktop shortcut
    - Start Menu shortcuts
-4. Click Install
-5. Launch the application
+3. Launch the application
 
-The installer handles everything automatically including auto-start configuration.
+### Portable
 
-### Option 2: Portable (No Installation)
-
-1. Extract the ZIP file to a folder
-2. Double-click `Launch-TextExpander.vbs` to start
-3. For auto-start: Right-click `setup-auto-start.ps1` > Run with PowerShell
+1. Extract ZIP to a folder
+2. Run `Launch-TextExpander.vbs`
+3. For auto-start: Run `setup-auto-start.ps1` with PowerShell
 
 ## Quick Start
 
-After installation, the application runs in your system tray (bottom-right corner).
+The application runs in your system tray.
 
-**Try it now:**
-1. Open any text editor (Notepad, Word, browser, etc.)
+**Try an expansion:**
+1. Open any text editor
 2. Type `;hello` and press Space
-3. Watch it expand to "Hello, World!"
+3. Expands to "Hello, World!"
 
-**More examples:**
+**Manage expansions:**
+1. Right-click tray icon
+2. Click "Configure"
+3. Use the GUI to add, edit, or delete expansions
+
+**Examples:**
 - `;date` → Current date (2024-12-15)
 - `;email` → your@email.com
 - `;shrug` → ¯\_(ツ)_/¯
 
 ## Features
 
-**Core Functionality:**
-- 144+ built-in text expansions
-- Works in any Windows application
-- Hot-reload configuration (no restart needed)
-- System tray integration
-- Auto-start on Windows boot
-- Visual feedback with notifications (optional)
+### GUI Interface
+- Modern, clean interface for managing expansions
+- Real-time search to find expansions quickly
+- Add, edit, and delete expansions with simple forms
+- Card-based layout showing all expansion details
+- No manual JSON editing required
 
-**Code Snippets:**
+### Core Functionality
+- 108 built-in text expansions
+- Works in any Windows application
+- Hot-reload configuration without restart
+- System tray integration
+- Auto-start on boot
+- Optional visual notifications
+
+### Code Snippets
 - Multi-language support: Python, JavaScript, Go, C, HTML, CSS, SQL
-- Full file templates (boilerplate code)
+- Full file templates and boilerplate code
 - Smart indentation
 - Cursor positioning with `{CURSOR}` placeholder
 
-**Template Variables:**
+### Template Variables
 - `{DATE}` - Current date
 - `{TIME}` - Current time  
-- `{DATETIME}` - Date and time
+- `{DATETIME}` - Date and time combined
 - `{CLIPBOARD}` - Paste clipboard content
 - `{CURSOR}` - Set cursor position after expansion
 
