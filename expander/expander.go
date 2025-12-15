@@ -29,6 +29,7 @@ type Expander struct {
 	mu          sync.RWMutex
 	running     bool
 	inExpansion bool
+	notifyFunc  func(trigger, replacement string) // Callback for notifications
 }
 
 // NewExpander constructs a new Expander for the given configuration.
@@ -69,6 +70,13 @@ func (e *Expander) SetLogger(l *utils.Logger) {
 	e.mu.Lock()
 	defer e.mu.Unlock()
 	e.logger = l
+}
+
+// SetNotificationCallback sets the function to call when an expansion occurs
+func (e *Expander) SetNotificationCallback(fn func(trigger, replacement string)) {
+	e.mu.Lock()
+	defer e.mu.Unlock()
+	e.notifyFunc = fn
 }
 
 // Start begins monitoring keyboard events.
@@ -262,6 +270,16 @@ func (e *Expander) PerformExpansion(trigger, expansion string) {
 	// Log usage.
 	if logger != nil && cfg != nil && cfg.GetSettings().LogExpansions {
 		logger.LogExpansion(trigger)
+	}
+
+	// Show notification if enabled
+	e.mu.RLock()
+	notifyFunc := e.notifyFunc
+	showNotifications := cfg != nil && cfg.GetSettings().ShowNotifications
+	e.mu.RUnlock()
+
+	if showNotifications && notifyFunc != nil {
+		go notifyFunc(trigger, text)
 	}
 }
 

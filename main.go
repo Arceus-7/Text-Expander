@@ -56,6 +56,12 @@ func onReady(exp *expander.Expander, cfg *config.Config, logger *utils.Logger) {
 	systray.SetTitle("Text Expander")
 	systray.SetTooltip("Text Expander")
 
+	// Set up notification callback
+	exp.SetNotificationCallback(gui.ShowExpansionNotification)
+
+	// Check for first run and show welcome dialog
+	go checkFirstRun()
+
 	if err := exp.Start(); err != nil {
 		log.Printf("failed to start keyboard hook: %v", err)
 	} else {
@@ -205,4 +211,29 @@ func loadIcon() {
 	}
 
 	log.Printf("No custom icon found, using default")
+}
+
+func checkFirstRun() {
+	isFirst, err := utils.IsFirstRun()
+	if err != nil {
+		log.Printf("Error checking first run: %v", err)
+		return
+	}
+
+	if isFirst {
+		log.Printf("First run detected, showing welcome message")
+
+		// Welcome message
+		time.Sleep(2 * time.Second) // Wait for systray to initialize
+		robotgo.Alert("Welcome to Text Expander!",
+			"Text Expander is now running in your system tray (bottom-right corner).\\n\\n"+
+				"Try typing: ;hello followed by Space\\n"+
+				"You'll see it expand to 'Hello, World!'\\n\\n"+
+				"Right-click the tray icon to configure expansions.\\n\\n"+
+				"144+ built-in expansions ready to use!")
+
+		utils.MarkAsCompleted()
+
+		log.Printf("First-run setup completed")
+	}
 }

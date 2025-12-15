@@ -4,7 +4,7 @@ A lightweight text expansion tool for Windows that automatically replaces shortc
 
 ## Features
 
-- 120+ built-in expansions for code, symbols, and common text
+- 144+ built-in expansions for code, symbols, and common text
 - Multi-language code snippet support (Python, JavaScript, Go, C, HTML, CSS, SQL, Java, TypeScript)
 - System tray integration with GUI editor
 - Hot-reload configuration
@@ -68,7 +68,33 @@ Type a trigger followed by Space, Tab, or Enter:
 **Database**
 - `;sqlselect` - SELECT query
 - `;sqlinsert` - INSERT statement
-- `;sqljoin` - JOIN query
+- `;sqlupdate` - UPDATE statement
+- `;sqldelete` - DELETE statement
+- `;sqljoin` - Basic JOIN
+- `;sqlcreate` - CREATE TABLE
+- `;sqldrop` - DROP TABLE
+- `;sqlalter` - ALTER TABLE
+- `;sqltruncate` - TRUNCATE TABLE
+- `;sqlleft` - LEFT JOIN
+- `;sqlright` - RIGHT JOIN
+- `;sqlinner` - INNER JOIN
+- `;sqlouter` - FULL OUTER JOIN
+- `;sqlunion` - UNION query
+- `;sqlexists` - EXISTS subquery
+- `;sqlin` - IN clause
+- `;sqlcase` - CASE statement
+- `;sqlgroup` - GROUP BY with HAVING
+- `;sqlorder` - ORDER BY
+- `;sqlindex` - CREATE INDEX
+- `;sqlview` - CREATE VIEW
+- `;sqlproc` - Stored procedure
+- `;sqltrigger` - Trigger template
+- `;sqltransaction` - Transaction block
+- `;sqlcount` - COUNT aggregate
+- `;sqlmax` - MAX aggregate
+- `;sqlmin` - MIN aggregate
+- `;sqlavg` - AVG aggregate
+- `;sqlsum` - SUM aggregate
 
 **Git**
 - `;gitcommit` - Conventional commit prefix
@@ -226,9 +252,9 @@ MIT License - See LICENSE file for details
 - C (12 expansions)
 - HTML (8 expansions)
 - CSS (5 expansions)
-- SQL (5 expansions)
+- SQL (29 expansions)
 - Git (7 expansions)
 - Symbols (15+ expansions)
 - Professional Templates (6 expansions)
 
-Total: 120+ ready-to-use expansions
+Total: 144+ ready-to-use expansions

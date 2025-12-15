@@ -1,702 +1,985 @@
 {
-  "expansions": [
-    {
-      "trigger": ";email",
-      "replacement": "subimal1974mondal@gmail.com",
-      "case_sensitive": false,
-      "description": "Personal email"
-    },
-    {
-      "trigger": ";date",
-      "replacement": "{DATE}",
-      "case_sensitive": false,
-      "description": "Current date"
-    },
-    {
-      "trigger": ";time",
-      "replacement": "{TIME}",
-      "case_sensitive": false,
-      "description": "Current time"
-    },
-    {
-      "trigger": ";dt",
-      "replacement": "{DATETIME}",
-      "case_sensitive": false,
-      "description": "Current date and time"
-    },
-    {
-      "trigger": ";sig",
-      "replacement": "Abhronkosh Mondal",
-      "case_sensitive": false,
-      "description": "Email signature"
-    },
-    {
-      "trigger": ";phone",
-      "replacement": "8697731167",
-      "case_sensitive": false,
-      "description": "Phone number"
-    },
-    {
-      "trigger": ";addr",
-      "replacement": "Adarshapally, Panihati, Kolkata, West Bengal, India",
-      "case_sensitive": false,
-      "description": "Address"
-    },
-    {
-      "trigger": ";thanks",
-      "replacement": "Thank you for your time and consideration.",
-      "case_sensitive": false,
-      "description": "Thank you message"
-    },
-    {
-      "trigger": ";regards",
-      "replacement": "Best regards,\nAbhronkosh Mondal",
-      "case_sensitive": false,
-      "description": "Best regards closing"
-    },
-    {
-      "trigger": ";sincerely",
-      "replacement": "Sincerely,\nAbhronkosh Mondal",
-      "case_sensitive": false,
-      "description": "Sincerely closing"
-    },
-    {
-      "trigger": ";shrug",
-      "replacement": "¯\\_(ツ)_/¯",
-      "case_sensitive": false,
-      "description": "Shrug emoji"
-    },
-    {
-      "trigger": ";clip",
-      "replacement": "{CLIPBOARD}",
-      "case_sensitive": false,
-      "description": "Paste clipboard content"
-    },
-    {
-      "trigger": ";br",
-      "replacement": "\n\n",
-      "case_sensitive": false,
-      "description": "Double line break"
-    },
-    {
-      "trigger": ";todo",
-      "replacement": "- [ ] ",
-      "case_sensitive": false,
-      "description": "Todo checkbox"
-    },
-    {
-      "trigger": ";done",
-      "replacement": "- [x] ",
-      "case_sensitive": false,
-      "description": "Completed todo checkbox"
-    },
-    {
-      "trigger": ";url",
-      "replacement": "https://",
-      "case_sensitive": false,
-      "description": "HTTPS URL prefix"
-    },
-    {
-      "trigger": ";www",
-      "replacement": "www.",
-      "case_sensitive": false,
-      "description": "WWW prefix"
-    },
-    {
-      "trigger": ";gmail",
-      "replacement": "@gmail.com",
-      "case_sensitive": false,
-      "description": "Gmail domain"
-    },
-    {
-      "trigger": ";pydef",
-      "replacement": "def function_name():\n    pass",
-      "case_sensitive": false,
-      "description": "Python function template"
-    },
-    {
-      "trigger": ";pyclass",
-      "replacement": "class ClassName:\n    def __init__(self):\n        pass",
-      "case_sensitive": false,
-      "description": "Python class template"
-    },
-    {
-      "trigger": ";pymain",
-      "replacement": "if __name__ == '__main__':\n    ",
-      "case_sensitive": false,
-      "description": "Python main guard"
-    },
-    {
-      "trigger": ";pytry",
-      "replacement": "try:\n    \nexcept Exception as e:\n    print(f\"Error: {e}\")",
-      "case_sensitive": false,
-      "description": "Python try-except block"
-    },
-    {
-      "trigger": ";pyfor",
-      "replacement": "for item in items:\n    ",
-      "case_sensitive": false,
-      "description": "Python for loop"
-    },
-    {
-      "trigger": ";pyif",
-      "replacement": "if condition:\n    ",
-      "case_sensitive": false,
-      "description": "Python if statement"
-    },
-    {
-      "trigger": ";pywith",
-      "replacement": "with open('file.txt', 'r') as f:\n    content = f.read()",
-      "case_sensitive": false,
-      "description": "Python with statement"
-    },
-    {
-      "trigger": ";pylist",
-      "replacement": "[item for item in items if condition]",
-      "case_sensitive": false,
-      "description": "Python list comprehension"
-    },
-    {
-      "trigger": ";jsfunc",
-      "replacement": "function functionName() {\n    \n}",
-      "case_sensitive": false,
-      "description": "JavaScript function"
-    },
-    {
-      "trigger": ";jsarrow",
-      "replacement": "const functionName = () => {\n    \n};",
-      "case_sensitive": false,
-      "description": "JavaScript arrow function"
-    },
-    {
-      "trigger": ";jsasync",
-      "replacement": "async function functionName() {\n    try {\n        const result = await somePromise();\n        return result;\n    } catch (error) {\n        console.error(error);\n    }\n}",
-      "case_sensitive": false,
-      "description": "JavaScript async function"
-    },
-    {
-      "trigger": ";jspromise",
-      "replacement": "new Promise((resolve, reject) => {\n    \n});",
-      "case_sensitive": false,
-      "description": "JavaScript Promise"
-    },
-    {
-      "trigger": ";jstry",
-      "replacement": "try {\n    \n} catch (error) {\n    console.error(error);\n}",
-      "case_sensitive": false,
-      "description": "JavaScript try-catch"
-    },
-    {
-      "trigger": ";jsfor",
-      "replacement": "for (let i = 0; i < array.length; i++) {\n    \n}",
-      "case_sensitive": false,
-      "description": "JavaScript for loop"
-    },
-    {
-      "trigger": ";jsforeach",
-      "replacement": "array.forEach(item => {\n    \n});",
-      "case_sensitive": false,
-      "description": "JavaScript forEach"
-    },
-    {
-      "trigger": ";jsmap",
-      "replacement": "const newArray = array.map(item => {\n    return item;\n});",
-      "case_sensitive": false,
-      "description": "JavaScript map"
-    },
-    {
-      "trigger": ";jsfilter",
-      "replacement": "const filtered = array.filter(item => item.condition);",
-      "case_sensitive": false,
-      "description": "JavaScript filter"
-    },
-    {
-      "trigger": ";jsreduce",
-      "replacement": "const result = array.reduce((acc, item) => {\n    return acc + item;\n}, 0);",
-      "case_sensitive": false,
-      "description": "JavaScript reduce"
-    },
-    {
-      "trigger": ";jsimport",
-      "replacement": "import { component } from 'module';",
-      "case_sensitive": false,
-      "description": "JavaScript ES6 import"
-    },
-    {
-      "trigger": ";jsexport",
-      "replacement": "export default functionName;",
-      "case_sensitive": false,
-      "description": "JavaScript ES6 export"
-    },
-    {
-      "trigger": ";gofunc",
-      "replacement": "func functionName() {\n\t\n}",
-      "case_sensitive": false,
-      "description": "Go function"
-    },
-    {
-      "trigger": ";gostruct",
-      "replacement": "type StructName struct {\n\tField string\n}",
-      "case_sensitive": false,
-      "description": "Go struct"
-    },
-    {
-      "trigger": ";goerr",
-      "replacement": "if err != nil {\n\treturn err\n}",
-      "case_sensitive": false,
-      "description": "Go error handling"
-    },
-    {
-      "trigger": ";gofor",
-      "replacement": "for i := 0; i < n; i++ {\n\t\n}",
-      "case_sensitive": false,
-      "description": "Go for loop"
-    },
-    {
-      "trigger": ";gorange",
-      "replacement": "for index, value := range items {\n\t\n}",
-      "case_sensitive": false,
-      "description": "Go range loop"
-    },
-    {
-      "trigger": ";gogoroutine",
-      "replacement": "go func() {\n\t\n}()",
-      "case_sensitive": false,
-      "description": "Go goroutine"
-    },
-    {
-      "trigger": ";gochannel",
-      "replacement": "ch := make(chan Type)",
-      "case_sensitive": false,
-      "description": "Go channel"
-    },
-    {
-      "trigger": ";goselect",
-      "replacement": "select {\ncase msg := <-ch1:\n\t\ncase msg := <-ch2:\n\t\ndefault:\n\t\n}",
-      "case_sensitive": false,
-      "description": "Go select statement"
-    },
-    {
-      "trigger": ";godefer",
-      "replacement": "defer func() {\n\t\n}()",
-      "case_sensitive": false,
-      "description": "Go defer statement"
-    },
-    {
-      "trigger": ";cfunc",
-      "replacement": "void functionName() {\n    \n}",
-      "case_sensitive": false,
-      "description": "C function"
-    },
-    {
-      "trigger": ";cmain",
-      "replacement": "#include <stdio.h>\n\nint main() {\n    \n    return 0;\n}",
-      "case_sensitive": false,
-      "description": "C main function"
-    },
-    {
-      "trigger": ";cfor",
-      "replacement": "for (int i = 0; i < n; i++) {\n    \n}",
-      "case_sensitive": false,
-      "description": "C for loop"
-    },
-    {
-      "trigger": ";cwhile",
-      "replacement": "while (condition) {\n    \n}",
-      "case_sensitive": false,
-      "description": "C while loop"
-    },
-    {
-      "trigger": ";cif",
-      "replacement": "if (condition) {\n    \n}",
-      "case_sensitive": false,
-      "description": "C if statement"
-    },
-    {
-      "trigger": ";cstruct",
-      "replacement": "typedef struct {\n    int field;\n} StructName;",
-      "case_sensitive": false,
-      "description": "C struct definition"
-    },
-    {
-      "trigger": ";cswitch",
-      "replacement": "switch (variable) {\n    case value1:\n        break;\n    case value2:\n        break;\n    default:\n        break;\n}",
-      "case_sensitive": false,
-      "description": "C switch statement"
-    },
-    {
-      "trigger": ";cmalloc",
-      "replacement": "int *ptr = (int*)malloc(size * sizeof(int));\nif (ptr == NULL) {\n    // Handle allocation failure\n}\nfree(ptr);",
-      "case_sensitive": false,
-      "description": "C malloc/free pattern"
-    },
-    {
-      "trigger": ";cprintf",
-      "replacement": "printf(\"%d\\n\", variable);",
-      "case_sensitive": false,
-      "description": "C printf statement"
-    },
-    {
-      "trigger": ";cscanf",
-      "replacement": "scanf(\"%d\", &variable);",
-      "case_sensitive": false,
-      "description": "C scanf statement"
-    },
-    {
-      "trigger": ";cfile",
-      "replacement": "FILE *fp = fopen(\"filename.txt\", \"r\");\nif (fp == NULL) {\n    perror(\"Error opening file\");\n    return 1;\n}\n// Use file\nfclose(fp);",
-      "case_sensitive": false,
-      "description": "C file operations"
-    },
-    {
-      "trigger": ";pyboiler",
-      "replacement": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nModule description goes here.\n\"\"\"\n\nimport sys\nimport os\n\n\ndef main():\n    \"\"\"Main function.\"\"\"\n    pass\n\n\nif __name__ == '__main__':\n    main()",
-      "case_sensitive": false,
-      "description": "Python boilerplate with main"
-    },
-    {
-      "trigger": ";jsboiler",
-      "replacement": "/**\n * @file filename.js\n * @description File description\n * @author Your Name\n */\n\n'use strict';\n\n// Main logic\nfunction main() {\n    \n}\n\n// Execute if run directly\nif (require.main === module) {\n    main();\n}\n\nmodule.exports = { main };",
-      "case_sensitive": false,
-      "description": "JavaScript Node.js boilerplate"
-    },
-    {
-      "trigger": ";goboiler",
-      "replacement": "package main\n\nimport (\n\t\"fmt\"\n\t\"log\"\n\t\"os\"\n)\n\nfunc main() {\n\t// Your code here\n\tfmt.Println(\"Hello, World!\")\n}",
-      "case_sensitive": false,
-      "description": "Go program boilerplate"
-    },
-    {
-      "trigger": ";cboiler",
-      "replacement": "/**\n * @file main.c\n * @brief Brief description\n * @author Your Name\n * @date 2024\n */\n\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint main(int argc, char *argv[]) {\n    // Your code here\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
-      "case_sensitive": false,
-      "description": "C program boilerplate"
-    },
-    {
-      "trigger": ";javaboiler",
-      "replacement": "/**\n * Main class description\n * @author Your Name\n */\npublic class Main {\n    /**\n     * Main method - entry point of the program\n     * @param args command line arguments\n     */\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
-      "case_sensitive": false,
-      "description": "Java class boilerplate"
-    },
-    {
-      "trigger": ";tsboiler",
-      "replacement": "/**\n * @fileoverview File description\n * @author Your Name\n */\n\ninterface Config {\n    // Define your interfaces\n}\n\nclass Main {\n    constructor() {\n        // Initialize\n    }\n    \n    public run(): void {\n        console.log('Hello, World!');\n    }\n}\n\nconst app = new Main();\napp.run();",
-      "case_sensitive": false,
-      "description": "TypeScript boilerplate"
-    },
-    {
-      "trigger": ";html5",
-      "replacement": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body>\n    \n</body>\n</html>",
-      "case_sensitive": false,
-      "description": "HTML5 boilerplate"
-    },
-    {
-      "trigger": ";htmldiv",
-      "replacement": "<div class=\"\">\n    \n</div>",
-      "case_sensitive": false,
-      "description": "HTML div tag"
-    },
-    {
-      "trigger": ";htmllink",
-      "replacement": "<a href=\"\"></a>",
-      "case_sensitive": false,
-      "description": "HTML link tag"
-    },
-    {
-      "trigger": ";htmlimg",
-      "replacement": "<img src=\"\" alt=\"\">",
-      "case_sensitive": false,
-      "description": "HTML image tag"
-    },
-    {
-      "trigger": ";htmlbtn",
-      "replacement": "<button type=\"button\"></button>",
-      "case_sensitive": false,
-      "description": "HTML button tag"
-    },
-    {
-      "trigger": ";htmlinput",
-      "replacement": "<input type=\"text\" name=\"\" id=\"\">",
-      "case_sensitive": false,
-      "description": "HTML input tag"
-    },
-    {
-      "trigger": ";htmlform",
-      "replacement": "<form action=\"\" method=\"post\">\n    \n</form>",
-      "case_sensitive": false,
-      "description": "HTML form tag"
-    },
-    {
-      "trigger": ";cssflex",
-      "replacement": "display: flex;\njustify-content: center;\nalign-items: center;",
-      "case_sensitive": false,
-      "description": "CSS flexbox centering"
-    },
-    {
-      "trigger": ";cssgrid",
-      "replacement": "display: grid;\ngrid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\ngap: 1rem;",
-      "case_sensitive": false,
-      "description": "CSS grid layout"
-    },
-    {
-      "trigger": ";cssmedia",
-      "replacement": "@media (max-width: 768px) {\n    \n}",
-      "case_sensitive": false,
-      "description": "CSS media query"
-    },
-    {
-      "trigger": ";csstransition",
-      "replacement": "transition: all 0.3s ease;",
-      "case_sensitive": false,
-      "description": "CSS transition"
-    },
-    {
-      "trigger": ";cssanimation",
-      "replacement": "@keyframes animationName {\n    0% { }\n    100% { }\n}",
-      "case_sensitive": false,
-      "description": "CSS keyframe animation"
-    },
-    {
-      "trigger": ";sqlselect",
-      "replacement": "SELECT * FROM table_name WHERE condition;",
-      "case_sensitive": false,
-      "description": "SQL SELECT statement"
-    },
-    {
-      "trigger": ";sqlinsert",
-      "replacement": "INSERT INTO table_name (column1, column2) VALUES (value1, value2);",
-      "case_sensitive": false,
-      "description": "SQL INSERT statement"
-    },
-    {
-      "trigger": ";sqlupdate",
-      "replacement": "UPDATE table_name SET column1 = value1 WHERE condition;",
-      "case_sensitive": false,
-      "description": "SQL UPDATE statement"
-    },
-    {
-      "trigger": ";sqldelete",
-      "replacement": "DELETE FROM table_name WHERE condition;",
-      "case_sensitive": false,
-      "description": "SQL DELETE statement"
-    },
-    {
-      "trigger": ";sqljoin",
-      "replacement": "SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;",
-      "case_sensitive": false,
-      "description": "SQL JOIN statement"
-    },
-    {
-      "trigger": ";gitcommit",
-      "replacement": "feat: ",
-      "case_sensitive": false,
-      "description": "Git commit - feature"
-    },
-    {
-      "trigger": ";gitfix",
-      "replacement": "fix: ",
-      "case_sensitive": false,
-      "description": "Git commit - fix"
-    },
-    {
-      "trigger": ";gitdocs",
-      "replacement": "docs: ",
-      "case_sensitive": false,
-      "description": "Git commit - documentation"
-    },
-    {
-      "trigger": ";gitstyle",
-      "replacement": "style: ",
-      "case_sensitive": false,
-      "description": "Git commit - style"
-    },
-    {
-      "trigger": ";gitrefactor",
-      "replacement": "refactor: ",
-      "case_sensitive": false,
-      "description": "Git commit - refactor"
-    },
-    {
-      "trigger": ";gittest",
-      "replacement": "test: ",
-      "case_sensitive": false,
-      "description": "Git commit - test"
-    },
-    {
-      "trigger": ";gitchore",
-      "replacement": "chore: ",
-      "case_sensitive": false,
-      "description": "Git commit - chore"
-    },
-    {
-      "trigger": ";check",
-      "replacement": "✓",
-      "case_sensitive": false,
-      "description": "Check mark"
-    },
-    {
-      "trigger": ";cross",
-      "replacement": "✗",
-      "case_sensitive": false,
-      "description": "Cross mark"
-    },
-    {
-      "trigger": ";arrow",
-      "replacement": "→",
-      "case_sensitive": false,
-      "description": "Right arrow"
-    },
-    {
-      "trigger": ";arrowleft",
-      "replacement": "←",
-      "case_sensitive": false,
-      "description": "Left arrow"
-    },
-    {
-      "trigger": ";arrowup",
-      "replacement": "↑",
-      "case_sensitive": false,
-      "description": "Up arrow"
-    },
-    {
-      "trigger": ";arrowdown",
-      "replacement": "↓",
-      "case_sensitive": false,
-      "description": "Down arrow"
-    },
-    {
-      "trigger": ";star",
-      "replacement": "★",
-      "case_sensitive": false,
-      "description": "Star symbol"
-    },
-    {
-      "trigger": ";heart",
-      "replacement": "❤",
-      "case_sensitive": false,
-      "description": "Heart symbol"
-    },
-    {
-      "trigger": ";smile",
-      "replacement": "😊",
-      "case_sensitive": false,
-      "description": "Smile emoji"
-    },
-    {
-      "trigger": ";thumbsup",
-      "replacement": "👍",
-      "case_sensitive": false,
-      "description": "Thumbs up emoji"
-    },
-    {
-      "trigger": ";fire",
-      "replacement": "🔥",
-      "case_sensitive": false,
-      "description": "Fire emoji"
-    },
-    {
-      "trigger": ";rocket",
-      "replacement": "🚀",
-      "case_sensitive": false,
-      "description": "Rocket emoji"
-    },
-    {
-      "trigger": ";warning",
-      "replacement": "⚠️",
-      "case_sensitive": false,
-      "description": "Warning symbol"
-    },
-    {
-      "trigger": ";info",
-      "replacement": "ℹ️",
-      "case_sensitive": false,
-      "description": "Information symbol"
-    },
-    {
-      "trigger": ";bullet",
-      "replacement": "•",
-      "case_sensitive": false,
-      "description": "Bullet point"
-    },
-    {
-      "trigger": ";ellipsis",
-      "replacement": "…",
-      "case_sensitive": false,
-      "description": "Ellipsis"
-    },
-    {
-      "trigger": ";degree",
-      "replacement": "°",
-      "case_sensitive": false,
-      "description": "Degree symbol"
-    },
-    {
-      "trigger": ";copyright",
-      "replacement": "©",
-      "case_sensitive": false,
-      "description": "Copyright symbol"
-    },
-    {
-      "trigger": ";trademark",
-      "replacement": "™",
-      "case_sensitive": false,
-      "description": "Trademark symbol"
-    },
-    {
-      "trigger": ";registered",
-      "replacement": "®",
-      "case_sensitive": false,
-      "description": "Registered trademark symbol"
-    },
-    {
-      "trigger": ";lgtm",
-      "replacement": "Looks good to me! ✓",
-      "case_sensitive": false,
-      "description": "Code review - LGTM"
-    },
-    {
-      "trigger": ";needswork",
-      "replacement": "This needs some work before merging.",
-      "case_sensitive": false,
-      "description": "Code review - needs work"
-    },
-    {
-      "trigger": ";approved",
-      "replacement": "Approved and ready to merge! 🚀",
-      "case_sensitive": false,
-      "description": "Code review - approved"
-    },
-    {
-      "trigger": ";meeting",
-      "replacement": "Thank you all for joining today's meeting. Here are the key takeaways:\n\n- \n\nNext steps:\n- ",
-      "case_sensitive": false,
-      "description": "Meeting summary template"
-    },
-    {
-      "trigger": ";followup",
-      "replacement": "Following up on our previous conversation...",
-      "case_sensitive": false,
-      "description": "Follow-up email opening"
-    },
-    {
-      "trigger": ";schedule",
-      "replacement": "I'd like to schedule a meeting to discuss this further. When would be a good time for you?",
-      "case_sensitive": false,
-      "description": "Meeting request"
-    },
-    {
-      "trigger": ";elina",
-      "replacement": "I LOVEEEE YOUUUUU SO MUCHHHHHHHHHHH <3 ",
-      "case_sensitive": false,
-      "description": "for my lovely gf"
-    }
-  ],
-  "settings": {
-    "enabled": true,
-    "trigger_on_space": true,
-    "trigger_on_tab": true,
-    "trigger_on_enter": true,
-    "show_notifications": false,
-    "log_expansions": true
-  }
+    "expansions":  [
+                       {
+                           "trigger":  ";email",
+                           "replacement":  "subimal1974mondal@gmail.com",
+                           "case_sensitive":  false,
+                           "description":  "Personal email",
+                           "category":  "Personal"
+                       },
+                       {
+                           "trigger":  ";date",
+                           "replacement":  "{DATE}",
+                           "case_sensitive":  false,
+                           "description":  "Current date",
+                           "category":  "DateTime"
+                       },
+                       {
+                           "trigger":  ";time",
+                           "replacement":  "{TIME}",
+                           "case_sensitive":  false,
+                           "description":  "Current time",
+                           "category":  "DateTime"
+                       },
+                       {
+                           "trigger":  ";dt",
+                           "replacement":  "{DATETIME}",
+                           "case_sensitive":  false,
+                           "description":  "Current date and time",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";sig",
+                           "replacement":  "Abhronkosh Mondal",
+                           "case_sensitive":  false,
+                           "description":  "Email signature",
+                           "category":  "Personal"
+                       },
+                       {
+                           "trigger":  ";phone",
+                           "replacement":  "8697731167",
+                           "case_sensitive":  false,
+                           "description":  "Phone number",
+                           "category":  "Personal"
+                       },
+                       {
+                           "trigger":  ";addr",
+                           "replacement":  "Adarshapally, Panihati, Kolkata, West Bengal, India",
+                           "case_sensitive":  false,
+                           "description":  "Address",
+                           "category":  "Personal"
+                       },
+                       {
+                           "trigger":  ";thanks",
+                           "replacement":  "Thank you for your time and consideration.",
+                           "case_sensitive":  false,
+                           "description":  "Thank you message",
+                           "category":  "Professional"
+                       },
+                       {
+                           "trigger":  ";regards",
+                           "replacement":  "Best regards,\nAbhronkosh Mondal",
+                           "case_sensitive":  false,
+                           "description":  "Best regards closing",
+                           "category":  "Professional"
+                       },
+                       {
+                           "trigger":  ";sincerely",
+                           "replacement":  "Sincerely,\nAbhronkosh Mondal",
+                           "case_sensitive":  false,
+                           "description":  "Sincerely closing",
+                           "category":  "Professional"
+                       },
+                       {
+                           "trigger":  ";shrug",
+                           "replacement":  "¯\\_(ツ)_/¯",
+                           "case_sensitive":  false,
+                           "description":  "Shrug emoji",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";clip",
+                           "replacement":  "{CLIPBOARD}",
+                           "case_sensitive":  false,
+                           "description":  "Paste clipboard content",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";br",
+                           "replacement":  "\n\n",
+                           "case_sensitive":  false,
+                           "description":  "Double line break",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";todo",
+                           "replacement":  "- [ ] ",
+                           "case_sensitive":  false,
+                           "description":  "Todo checkbox",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";done",
+                           "replacement":  "- [x] ",
+                           "case_sensitive":  false,
+                           "description":  "Completed todo checkbox",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";url",
+                           "replacement":  "https://",
+                           "case_sensitive":  false,
+                           "description":  "HTTPS URL prefix",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";www",
+                           "replacement":  "www.",
+                           "case_sensitive":  false,
+                           "description":  "WWW prefix",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";gmail",
+                           "replacement":  "@gmail.com",
+                           "case_sensitive":  false,
+                           "description":  "Gmail domain",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";pydef",
+                           "replacement":  "def function_name():\n    pass",
+                           "case_sensitive":  false,
+                           "description":  "Python function template",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pyclass",
+                           "replacement":  "class ClassName:\n    def __init__(self):\n        pass",
+                           "case_sensitive":  false,
+                           "description":  "Python class template",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pymain",
+                           "replacement":  "if __name__ == \u0027__main__\u0027:\n    ",
+                           "case_sensitive":  false,
+                           "description":  "Python main guard",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pytry",
+                           "replacement":  "try:\n    \nexcept Exception as e:\n    print(f\"Error: {e}\")",
+                           "case_sensitive":  false,
+                           "description":  "Python try-except block",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pyfor",
+                           "replacement":  "for item in items:\n    ",
+                           "case_sensitive":  false,
+                           "description":  "Python for loop",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pyif",
+                           "replacement":  "if condition:\n    ",
+                           "case_sensitive":  false,
+                           "description":  "Python if statement",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pywith",
+                           "replacement":  "with open(\u0027file.txt\u0027, \u0027r\u0027) as f:\n    content = f.read()",
+                           "case_sensitive":  false,
+                           "description":  "Python with statement",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";pylist",
+                           "replacement":  "[item for item in items if condition]",
+                           "case_sensitive":  false,
+                           "description":  "Python list comprehension",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";jsfunc",
+                           "replacement":  "function functionName() {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript function",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsarrow",
+                           "replacement":  "const functionName = () =\u003e {\n    \n};",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript arrow function",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsasync",
+                           "replacement":  "async function functionName() {\n    try {\n        const result = await somePromise();\n        return result;\n    } catch (error) {\n        console.error(error);\n    }\n}",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript async function",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jspromise",
+                           "replacement":  "new Promise((resolve, reject) =\u003e {\n    \n});",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript Promise",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jstry",
+                           "replacement":  "try {\n    \n} catch (error) {\n    console.error(error);\n}",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript try-catch",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsfor",
+                           "replacement":  "for (let i = 0; i \u003c array.length; i++) {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript for loop",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsforeach",
+                           "replacement":  "array.forEach(item =\u003e {\n    \n});",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript forEach",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsmap",
+                           "replacement":  "const newArray = array.map(item =\u003e {\n    return item;\n});",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript map",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsfilter",
+                           "replacement":  "const filtered = array.filter(item =\u003e item.condition);",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript filter",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsreduce",
+                           "replacement":  "const result = array.reduce((acc, item) =\u003e {\n    return acc + item;\n}, 0);",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript reduce",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsimport",
+                           "replacement":  "import { component } from \u0027module\u0027;",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript ES6 import",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";jsexport",
+                           "replacement":  "export default functionName;",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript ES6 export",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";gofunc",
+                           "replacement":  "func functionName() {\n\t\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go function",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";gostruct",
+                           "replacement":  "type StructName struct {\n\tField string\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go struct",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";goerr",
+                           "replacement":  "if err != nil {\n\treturn err\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go error handling",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";gofor",
+                           "replacement":  "for i := 0; i \u003c n; i++ {\n\t\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go for loop",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";gorange",
+                           "replacement":  "for index, value := range items {\n\t\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go range loop",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";gogoroutine",
+                           "replacement":  "go func() {\n\t\n}()",
+                           "case_sensitive":  false,
+                           "description":  "Go goroutine",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";gochannel",
+                           "replacement":  "ch := make(chan Type)",
+                           "case_sensitive":  false,
+                           "description":  "Go channel",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";goselect",
+                           "replacement":  "select {\ncase msg := \u003c-ch1:\n\t\ncase msg := \u003c-ch2:\n\t\ndefault:\n\t\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go select statement",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";godefer",
+                           "replacement":  "defer func() {\n\t\n}()",
+                           "case_sensitive":  false,
+                           "description":  "Go defer statement",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";cfunc",
+                           "replacement":  "void functionName() {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "C function",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cmain",
+                           "replacement":  "#include \u003cstdio.h\u003e\n\nint main() {\n    \n    return 0;\n}",
+                           "case_sensitive":  false,
+                           "description":  "C main function",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cfor",
+                           "replacement":  "for (int i = 0; i \u003c n; i++) {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "C for loop",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cwhile",
+                           "replacement":  "while (condition) {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "C while loop",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cif",
+                           "replacement":  "if (condition) {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "C if statement",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cstruct",
+                           "replacement":  "typedef struct {\n    int field;\n} StructName;",
+                           "case_sensitive":  false,
+                           "description":  "C struct definition",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cswitch",
+                           "replacement":  "switch (variable) {\n    case value1:\n        break;\n    case value2:\n        break;\n    default:\n        break;\n}",
+                           "case_sensitive":  false,
+                           "description":  "C switch statement",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cmalloc",
+                           "replacement":  "int *ptr = (int*)malloc(size * sizeof(int));\nif (ptr == NULL) {\n    // Handle allocation failure\n}\nfree(ptr);",
+                           "case_sensitive":  false,
+                           "description":  "C malloc/free pattern",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cprintf",
+                           "replacement":  "printf(\"%d\\n\", variable);",
+                           "case_sensitive":  false,
+                           "description":  "C printf statement",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cscanf",
+                           "replacement":  "scanf(\"%d\", \u0026variable);",
+                           "case_sensitive":  false,
+                           "description":  "C scanf statement",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";cfile",
+                           "replacement":  "FILE *fp = fopen(\"filename.txt\", \"r\");\nif (fp == NULL) {\n    perror(\"Error opening file\");\n    return 1;\n}\n// Use file\nfclose(fp);",
+                           "case_sensitive":  false,
+                           "description":  "C file operations",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";pyboiler",
+                           "replacement":  "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nModule description goes here.\n\"\"\"\n\nimport sys\nimport os\n\n\ndef main():\n    \"\"\"Main function.\"\"\"\n    pass\n\n\nif __name__ == \u0027__main__\u0027:\n    main()",
+                           "case_sensitive":  false,
+                           "description":  "Python boilerplate with main",
+                           "category":  "Python"
+                       },
+                       {
+                           "trigger":  ";jsboiler",
+                           "replacement":  "/**\n * @file filename.js\n * @description File description\n * @author Your Name\n */\n\n\u0027use strict\u0027;\n\n// Main logic\nfunction main() {\n    \n}\n\n// Execute if run directly\nif (require.main === module) {\n    main();\n}\n\nmodule.exports = { main };",
+                           "case_sensitive":  false,
+                           "description":  "JavaScript Node.js boilerplate",
+                           "category":  "JavaScript"
+                       },
+                       {
+                           "trigger":  ";goboiler",
+                           "replacement":  "package main\n\nimport (\n\t\"fmt\"\n\t\"log\"\n\t\"os\"\n)\n\nfunc main() {\n\t// Your code here\n\tfmt.Println(\"Hello, World!\")\n}",
+                           "case_sensitive":  false,
+                           "description":  "Go program boilerplate",
+                           "category":  "Go"
+                       },
+                       {
+                           "trigger":  ";cboiler",
+                           "replacement":  "/**\n * @file main.c\n * @brief Brief description\n * @author Your Name\n * @date 2024\n */\n\n#include \u003cstdio.h\u003e\n#include \u003cstdlib.h\u003e\n#include \u003cstring.h\u003e\n\nint main(int argc, char *argv[]) {\n    // Your code here\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+                           "case_sensitive":  false,
+                           "description":  "C program boilerplate",
+                           "category":  "C"
+                       },
+                       {
+                           "trigger":  ";javaboiler",
+                           "replacement":  "/**\n * Main class description\n * @author Your Name\n */\npublic class Main {\n    /**\n     * Main method - entry point of the program\n     * @param args command line arguments\n     */\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+                           "case_sensitive":  false,
+                           "description":  "Java class boilerplate",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";tsboiler",
+                           "replacement":  "/**\n * @fileoverview File description\n * @author Your Name\n */\n\ninterface Config {\n    // Define your interfaces\n}\n\nclass Main {\n    constructor() {\n        // Initialize\n    }\n    \n    public run(): void {\n        console.log(\u0027Hello, World!\u0027);\n    }\n}\n\nconst app = new Main();\napp.run();",
+                           "case_sensitive":  false,
+                           "description":  "TypeScript boilerplate",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";html5",
+                           "replacement":  "\u003c!DOCTYPE html\u003e\n\u003chtml lang=\"en\"\u003e\n\u003chead\u003e\n    \u003cmeta charset=\"UTF-8\"\u003e\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e\n    \u003ctitle\u003eDocument\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n    \n\u003c/body\u003e\n\u003c/html\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML5 boilerplate",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";htmldiv",
+                           "replacement":  "\u003cdiv class=\"\"\u003e\n    \n\u003c/div\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML div tag",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";htmllink",
+                           "replacement":  "\u003ca href=\"\"\u003e\u003c/a\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML link tag",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";htmlimg",
+                           "replacement":  "\u003cimg src=\"\" alt=\"\"\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML image tag",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";htmlbtn",
+                           "replacement":  "\u003cbutton type=\"button\"\u003e\u003c/button\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML button tag",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";htmlinput",
+                           "replacement":  "\u003cinput type=\"text\" name=\"\" id=\"\"\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML input tag",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";htmlform",
+                           "replacement":  "\u003cform action=\"\" method=\"post\"\u003e\n    \n\u003c/form\u003e",
+                           "case_sensitive":  false,
+                           "description":  "HTML form tag",
+                           "category":  "HTML"
+                       },
+                       {
+                           "trigger":  ";cssflex",
+                           "replacement":  "display: flex;\njustify-content: center;\nalign-items: center;",
+                           "case_sensitive":  false,
+                           "description":  "CSS flexbox centering",
+                           "category":  "CSS"
+                       },
+                       {
+                           "trigger":  ";cssgrid",
+                           "replacement":  "display: grid;\ngrid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\ngap: 1rem;",
+                           "case_sensitive":  false,
+                           "description":  "CSS grid layout",
+                           "category":  "CSS"
+                       },
+                       {
+                           "trigger":  ";cssmedia",
+                           "replacement":  "@media (max-width: 768px) {\n    \n}",
+                           "case_sensitive":  false,
+                           "description":  "CSS media query",
+                           "category":  "CSS"
+                       },
+                       {
+                           "trigger":  ";csstransition",
+                           "replacement":  "transition: all 0.3s ease;",
+                           "case_sensitive":  false,
+                           "description":  "CSS transition",
+                           "category":  "CSS"
+                       },
+                       {
+                           "trigger":  ";cssanimation",
+                           "replacement":  "@keyframes animationName {\n    0% { }\n    100% { }\n}",
+                           "case_sensitive":  false,
+                           "description":  "CSS keyframe animation",
+                           "category":  "CSS"
+                       },
+                       {
+                           "trigger":  ";sqlselect",
+                           "replacement":  "SELECT * FROM table_name WHERE condition;",
+                           "case_sensitive":  false,
+                           "description":  "SQL SELECT statement",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlinsert",
+                           "replacement":  "INSERT INTO table_name (column1, column2) VALUES (value1, value2);",
+                           "case_sensitive":  false,
+                           "description":  "SQL INSERT statement",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlupdate",
+                           "replacement":  "UPDATE table_name SET column1 = value1 WHERE condition;",
+                           "case_sensitive":  false,
+                           "description":  "SQL UPDATE statement",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqldelete",
+                           "replacement":  "DELETE FROM table_name WHERE condition;",
+                           "case_sensitive":  false,
+                           "description":  "SQL DELETE statement",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqljoin",
+                           "replacement":  "SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;",
+                           "case_sensitive":  false,
+                           "description":  "SQL JOIN statement",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";gitcommit",
+                           "replacement":  "feat: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - feature",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";gitfix",
+                           "replacement":  "fix: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - fix",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";gitdocs",
+                           "replacement":  "docs: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - documentation",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";gitstyle",
+                           "replacement":  "style: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - style",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";gitrefactor",
+                           "replacement":  "refactor: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - refactor",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";gittest",
+                           "replacement":  "test: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - test",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";gitchore",
+                           "replacement":  "chore: ",
+                           "case_sensitive":  false,
+                           "description":  "Git commit - chore",
+                           "category":  "Git"
+                       },
+                       {
+                           "trigger":  ";check",
+                           "replacement":  "✓",
+                           "case_sensitive":  false,
+                           "description":  "Check mark",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";cross",
+                           "replacement":  "✗",
+                           "case_sensitive":  false,
+                           "description":  "Cross mark",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";arrow",
+                           "replacement":  "→",
+                           "case_sensitive":  false,
+                           "description":  "Right arrow",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";arrowleft",
+                           "replacement":  "←",
+                           "case_sensitive":  false,
+                           "description":  "Left arrow",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";arrowup",
+                           "replacement":  "↑",
+                           "case_sensitive":  false,
+                           "description":  "Up arrow",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";arrowdown",
+                           "replacement":  "↓",
+                           "case_sensitive":  false,
+                           "description":  "Down arrow",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";star",
+                           "replacement":  "★",
+                           "case_sensitive":  false,
+                           "description":  "Star symbol",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";heart",
+                           "replacement":  "❤",
+                           "case_sensitive":  false,
+                           "description":  "Heart symbol",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";smile",
+                           "replacement":  "😊",
+                           "case_sensitive":  false,
+                           "description":  "Smile emoji",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";thumbsup",
+                           "replacement":  "👍",
+                           "case_sensitive":  false,
+                           "description":  "Thumbs up emoji",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";fire",
+                           "replacement":  "🔥",
+                           "case_sensitive":  false,
+                           "description":  "Fire emoji",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";rocket",
+                           "replacement":  "🚀",
+                           "case_sensitive":  false,
+                           "description":  "Rocket emoji",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";warning",
+                           "replacement":  "⚠️",
+                           "case_sensitive":  false,
+                           "description":  "Warning symbol",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";info",
+                           "replacement":  "ℹ️",
+                           "case_sensitive":  false,
+                           "description":  "Information symbol",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";bullet",
+                           "replacement":  "•",
+                           "case_sensitive":  false,
+                           "description":  "Bullet point",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";ellipsis",
+                           "replacement":  "…",
+                           "case_sensitive":  false,
+                           "description":  "Ellipsis",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";degree",
+                           "replacement":  "°",
+                           "case_sensitive":  false,
+                           "description":  "Degree symbol",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";copyright",
+                           "replacement":  "©",
+                           "case_sensitive":  false,
+                           "description":  "Copyright symbol",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";trademark",
+                           "replacement":  "™",
+                           "case_sensitive":  false,
+                           "description":  "Trademark symbol",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";registered",
+                           "replacement":  "®",
+                           "case_sensitive":  false,
+                           "description":  "Registered trademark symbol",
+                           "category":  "Symbols"
+                       },
+                       {
+                           "trigger":  ";lgtm",
+                           "replacement":  "Looks good to me! ✓",
+                           "case_sensitive":  false,
+                           "description":  "Code review - LGTM",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";needswork",
+                           "replacement":  "This needs some work before merging.",
+                           "case_sensitive":  false,
+                           "description":  "Code review - needs work",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";approved",
+                           "replacement":  "Approved and ready to merge! 🚀",
+                           "case_sensitive":  false,
+                           "description":  "Code review - approved",
+                           "category":  "Other"
+                       },
+                       {
+                           "trigger":  ";meeting",
+                           "replacement":  "Thank you all for joining today\u0027s meeting. Here are the key takeaways:\n\n- \n\nNext steps:\n- ",
+                           "case_sensitive":  false,
+                           "description":  "Meeting summary template",
+                           "category":  "Professional"
+                       },
+                       {
+                           "trigger":  ";followup",
+                           "replacement":  "Following up on our previous conversation...",
+                           "case_sensitive":  false,
+                           "description":  "Follow-up email opening",
+                           "category":  "Professional"
+                       },
+                       {
+                           "trigger":  ";schedule",
+                           "replacement":  "I\u0027d like to schedule a meeting to discuss this further. When would be a good time for you?",
+                           "case_sensitive":  false,
+                           "description":  "Meeting request",
+                           "category":  "Professional"
+                       },
+                       {
+                           "trigger":  ";elina",
+                           "replacement":  "I LOVEEEE YOUUUUU SO MUCHHHHHHHHHHH \u003c3 ",
+                           "case_sensitive":  false,
+                           "description":  "for my lovely gf",
+                           "category":  "Personal"
+                       },
+                       {
+                           "trigger":  ";sqlcreate",
+                           "replacement":  "CREATE TABLE table_name (\\n    id INT PRIMARY KEY AUTO_INCREMENT,\\n    column1 VARCHAR(255),\\n    column2 INT,\\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\\n);",
+                           "case_sensitive":  false,
+                           "description":  "SQL CREATE TABLE template",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqldrop",
+                           "replacement":  "DROP TABLE IF EXISTS table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL DROP TABLE",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlalter",
+                           "replacement":  "ALTER TABLE table_name\\nADD COLUMN column_name VARCHAR(255);",
+                           "case_sensitive":  false,
+                           "description":  "SQL ALTER TABLE",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqltruncate",
+                           "replacement":  "TRUNCATE TABLE table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL TRUNCATE TABLE",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlleft",
+                           "replacement":  "SELECT a.*, b.*\\nFROM table_a a\\nLEFT JOIN table_b b ON a.id = b.table_a_id;",
+                           "case_sensitive":  false,
+                           "description":  "SQL LEFT JOIN",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlright",
+                           "replacement":  "SELECT a.*, b.*\\nFROM table_a a\\nRIGHT JOIN table_b b ON a.id = b.table_a_id;",
+                           "case_sensitive":  false,
+                           "description":  "SQL RIGHT JOIN",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlinner",
+                           "replacement":  "SELECT a.*, b.*\\nFROM table_a a\\nINNER JOIN table_b b ON a.id = b.table_a_id;",
+                           "case_sensitive":  false,
+                           "description":  "SQL INNER JOIN",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlouter",
+                           "replacement":  "SELECT a.*, b.*\\nFROM table_a a\\nFULL OUTER JOIN table_b b ON a.id = b.table_a_id;",
+                           "case_sensitive":  false,
+                           "description":  "SQL FULL OUTER JOIN",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlunion",
+                           "replacement":  "SELECT column1, column2 FROM table1\\nUNION\\nSELECT column1, column2 FROM table2;",
+                           "case_sensitive":  false,
+                           "description":  "SQL UNION query",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlexists",
+                           "replacement":  "SELECT * FROM table_name\\nWHERE EXISTS (\\n    SELECT 1 FROM other_table\\n    WHERE condition\\n);",
+                           "case_sensitive":  false,
+                           "description":  "SQL EXISTS subquery",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlin",
+                           "replacement":  "SELECT * FROM table_name\\nWHERE column_name IN (value1, value2, value3);",
+                           "case_sensitive":  false,
+                           "description":  "SQL IN clause",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlcase",
+                           "replacement":  "SELECT column_name,\\n    CASE\\n        WHEN condition1 THEN result1\\n        WHEN condition2 THEN result2\\n        ELSE default_result\\n    END AS alias\\nFROM table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL CASE statement",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlgroup",
+                           "replacement":  "SELECT column1, COUNT(*)\\nFROM table_name\\nGROUP BY column1\\nHAVING COUNT(*) \u003e 1;",
+                           "case_sensitive":  false,
+                           "description":  "SQL GROUP BY with HAVING",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlorder",
+                           "replacement":  "SELECT * FROM table_name\\nORDER BY column1 ASC, column2 DESC;",
+                           "case_sensitive":  false,
+                           "description":  "SQL ORDER BY",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlindex",
+                           "replacement":  "CREATE INDEX idx_column_name\\nON table_name (column_name);",
+                           "case_sensitive":  false,
+                           "description":  "SQL CREATE INDEX",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlview",
+                           "replacement":  "CREATE VIEW view_name AS\\nSELECT column1, column2\\nFROM table_name\\nWHERE condition;",
+                           "case_sensitive":  false,
+                           "description":  "SQL CREATE VIEW",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlproc",
+                           "replacement":  "CREATE PROCEDURE procedure_name(IN param1 INT)\\nBEGIN\\n    SELECT * FROM table_name WHERE id = param1;\\nEND;",
+                           "case_sensitive":  false,
+                           "description":  "SQL stored procedure template",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqltrigger",
+                           "replacement":  "CREATE TRIGGER trigger_name\\nAFTER INSERT ON table_name\\nFOR EACH ROW\\nBEGIN\\n    -- trigger logic\\nEND;",
+                           "case_sensitive":  false,
+                           "description":  "SQL trigger template",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqltransaction",
+                           "replacement":  "START TRANSACTION;\\n-- SQL statements\\nCOMMIT;\\n-- Or: ROLLBACK;",
+                           "case_sensitive":  false,
+                           "description":  "SQL transaction block",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlcount",
+                           "replacement":  "SELECT COUNT(*) FROM table_name WHERE condition;",
+                           "case_sensitive":  false,
+                           "description":  "SQL COUNT query",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlmax",
+                           "replacement":  "SELECT MAX(column_name) FROM table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL MAX aggregate",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlmin",
+                           "replacement":  "SELECT MIN(column_name) FROM table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL MIN aggregate",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlavg",
+                           "replacement":  "SELECT AVG(column_name) FROM table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL AVG aggregate",
+                           "category":  "SQL"
+                       },
+                       {
+                           "trigger":  ";sqlsum",
+                           "replacement":  "SELECT SUM(column_name) FROM table_name;",
+                           "case_sensitive":  false,
+                           "description":  "SQL SUM aggregate",
+                           "category":  "SQL"
+                       }
+                   ],
+    "settings":  {
+                     "enabled":  true,
+                     "trigger_on_space":  true,
+                     "trigger_on_tab":  true,
+                     "trigger_on_enter":  true,
+                     "show_notifications":  false,
+                     "log_expansions":  true
+                 }
 }

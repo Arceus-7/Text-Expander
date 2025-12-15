@@ -14,10 +14,11 @@ import (
 
 // Expansion defines a single trigger/replacement pair as stored in the config file.
 type Expansion struct {
-	Trigger      string `json:"trigger"`
-	Replacement  string `json:"replacement"`
+	Trigger       string `json:"trigger"`
+	Replacement   string `json:"replacement"`
 	CaseSensitive bool   `json:"case_sensitive"`
-	Description  string `json:"description"`
+	Description   string `json:"description"`
+	Category      string `json:"category,omitempty"` // NEW: Category for filtering/organization
 }
 
 // Settings contains global behaviour flags.
@@ -32,9 +33,9 @@ type Settings struct {
 
 // Config is the root configuration object for the application.
 type Config struct {
-	Expansions      []Expansion        `json:"expansions"`
-	CustomVariables map[string]string  `json:"custom_variables"`
-	Settings        Settings           `json:"settings"`
+	Expansions      []Expansion       `json:"expansions"`
+	CustomVariables map[string]string `json:"custom_variables"`
+	Settings        Settings          `json:"settings"`
 
 	filePath string
 	mu       sync.RWMutex
@@ -277,28 +278,28 @@ func defaultConfig() *Config {
 	return &Config{
 		Expansions: []Expansion{
 			{
-				Trigger:      ";email",
-				Replacement:  "your.email@example.com",
+				Trigger:       ";email",
+				Replacement:   "your.email@example.com",
 				CaseSensitive: false,
-				Description:  "Personal email",
+				Description:   "Personal email",
 			},
 			{
-				Trigger:      ";date",
-				Replacement:  "{DATE}",
+				Trigger:       ";date",
+				Replacement:   "{DATE}",
 				CaseSensitive: false,
-				Description:  "Current date",
+				Description:   "Current date",
 			},
 			{
-				Trigger:      ";sig",
-				Replacement:  "Best regards,\nYour Name",
+				Trigger:       ";sig",
+				Replacement:   "Best regards,\nYour Name",
 				CaseSensitive: false,
-				Description:  "Email signature",
+				Description:   "Email signature",
 			},
 			{
-				Trigger:      ";shrug",
-				Replacement:  "¯\\_(ツ)_/¯",
+				Trigger:       ";shrug",
+				Replacement:   "¯\\_(ツ)_/¯",
 				CaseSensitive: false,
-				Description:  "Shrug emoji",
+				Description:   "Shrug emoji",
 			},
 		},
 		CustomVariables: map[string]string{
