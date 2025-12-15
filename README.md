@@ -1,260 +1,310 @@
-# Text Expander
+# Text Expander for Windows
 
-A lightweight text expansion tool for Windows that automatically replaces shortcuts with longer text snippets. Works across all applications.
+Lightweight text expansion tool that automatically replaces shortcuts with longer text snippets. Works across all applications.
 
-## Features
+## Installation
 
-- 144+ built-in expansions for code, symbols, and common text
-- Multi-language code snippet support (Python, JavaScript, Go, C, HTML, CSS, SQL, Java, TypeScript)
-- System tray integration with GUI editor
-- Hot-reload configuration
-- Auto-start on Windows boot
-- Works in any application
+### Option 1: Installer (Recommended)
+
+1. Download `TextExpander-Setup-1.1.0.exe` from [Releases](https://github.com/Arceus-7/Text-Expander/releases)
+2. Run the installer
+3. Choose installation options:
+   - Start automatically with Windows (recommended)
+   - Desktop shortcut
+   - Start Menu shortcuts
+4. Click Install
+5. Launch the application
+
+The installer handles everything automatically including auto-start configuration.
+
+### Option 2: Portable (No Installation)
+
+1. Extract the ZIP file to a folder
+2. Double-click `Launch-TextExpander.vbs` to start
+3. For auto-start: Right-click `setup-auto-start.ps1` > Run with PowerShell
 
 ## Quick Start
 
-### Running the Application
+After installation, the application runs in your system tray (bottom-right corner).
 
-**Option 1: Double-click launcher**
+**Try it now:**
+1. Open any text editor (Notepad, Word, browser, etc.)
+2. Type `;hello` and press Space
+3. Watch it expand to "Hello, World!"
+
+**More examples:**
+- `;date` → Current date (2024-12-15)
+- `;email` → your@email.com
+- `;shrug` → ¯\_(ツ)_/¯
+
+## Features
+
+**Core Functionality:**
+- 144+ built-in text expansions
+- Works in any Windows application
+- Hot-reload configuration (no restart needed)
+- System tray integration
+- Auto-start on Windows boot
+- Visual feedback with notifications (optional)
+
+**Code Snippets:**
+- Multi-language support: Python, JavaScript, Go, C, HTML, CSS, SQL
+- Full file templates (boilerplate code)
+- Smart indentation
+- Cursor positioning with `{CURSOR}` placeholder
+
+**Template Variables:**
+- `{DATE}` - Current date
+- `{TIME}` - Current time  
+- `{DATETIME}` - Date and time
+- `{CLIPBOARD}` - Paste clipboard content
+- `{CURSOR}` - Set cursor position after expansion
+
+## Expansion Categories
+
+| Category | Count | Examples |
+|----------|-------|----------|
+| SQL | 29 | CREATE, SELECT, JOIN, aggregates |
+| JavaScript | 13 | Functions, async/await, promises |
+| C | 12 | Functions, structs, memory management |
+| Symbols | 12 | Arrows, check marks, emojis |
+| Go | 10 | Functions, error handling, channels |
+| Python | 9 | Classes, loops, file handling |
+| HTML | 7 | HTML5, forms, tables |
+| Professional | 6 | Email signatures, meetings |
+| Personal | 5 | Email, phone, address |
+| CSS | 5 | Flexbox, grid, animations |
+
+**Total: 108 expansions**
+
+## Code Examples
+
+### Python
 ```
-Launch-TextExpander.vbs
+;pydef  → Function definition
+;pyclass → Class template
+;pytry   → Try-except block
+;pyfor   → For loop
+;pyboiler → Full Python file template
 ```
 
-**Option 2: Set up auto-start**
-1. Right-click `setup-auto-start.ps1`
-2. Select "Run with PowerShell"
-3. Confirm with 'Y'
+### JavaScript
+```
+;jsfunc  → Function declaration
+;jsarrow → Arrow function
+;jsasync → Async/await template
+;jspromise → Promise template
+```
 
-The application runs silently in the background. Look for the icon in your system tray (bottom-right corner).
+### SQL
+```
+;sqlselect → SELECT query
+;sqlcreate → CREATE TABLE
+;sqljoin   → INNER JOIN
+;sqlunion  → UNION query
+;sqlgroup  → GROUP BY with HAVING
+```
 
-## Usage
+### Web Development
+```
+;html5   → HTML5 boilerplate
+;cssflex → Flexbox centering
+;cssgrid → CSS grid layout
+```
 
-Type a trigger followed by Space, Tab, or Enter:
-
-| Trigger | Result |
-|---------|--------|
-| `;email` | your@email.com |
-| `;date` | 2024-12-13 |
-| `;sig` | Email signature |
-
-### Code Snippets
-
-**Python**
-- `;pydef` - Function definition
-- `;pyclass` - Class template
-- `;pyboiler` - Full Python file template
-
-**JavaScript**
-- `;jsfunc` - Function declaration
-- `;jsarrow` - Arrow function
-- `;jsasync` - Async/await template
-
-**C**
-- `;cfunc` - Function template
-- `;cmain` - Main function with includes
-- `;cmalloc` - Memory allocation with error checking
-- `;cboiler` - Complete C file template
-
-**Go**
-- `;gofunc` - Go function
-- `;goerr` - Error handling pattern
-- `;goboiler` - Go file template
-
-**Web Development**
-- `;html5` - HTML5 boilerplate
-- `;cssflex` - Flexbox layout
-- `;cssgrid` - CSS grid
-
-**Database**
-- `;sqlselect` - SELECT query
-- `;sqlinsert` - INSERT statement
-- `;sqlupdate` - UPDATE statement
-- `;sqldelete` - DELETE statement
-- `;sqljoin` - Basic JOIN
-- `;sqlcreate` - CREATE TABLE
-- `;sqldrop` - DROP TABLE
-- `;sqlalter` - ALTER TABLE
-- `;sqltruncate` - TRUNCATE TABLE
-- `;sqlleft` - LEFT JOIN
-- `;sqlright` - RIGHT JOIN
-- `;sqlinner` - INNER JOIN
-- `;sqlouter` - FULL OUTER JOIN
-- `;sqlunion` - UNION query
-- `;sqlexists` - EXISTS subquery
-- `;sqlin` - IN clause
-- `;sqlcase` - CASE statement
-- `;sqlgroup` - GROUP BY with HAVING
-- `;sqlorder` - ORDER BY
-- `;sqlindex` - CREATE INDEX
-- `;sqlview` - CREATE VIEW
-- `;sqlproc` - Stored procedure
-- `;sqltrigger` - Trigger template
-- `;sqltransaction` - Transaction block
-- `;sqlcount` - COUNT aggregate
-- `;sqlmax` - MAX aggregate
-- `;sqlmin` - MIN aggregate
-- `;sqlavg` - AVG aggregate
-- `;sqlsum` - SUM aggregate
-
-**Git**
-- `;gitcommit` - Conventional commit prefix
-- `;gitfix` - Fix commit prefix
-
-Complete list available in `config/expansions.json`
+### C Programming
+```
+;cmain   → Main function with includes
+;cmalloc → Memory allocation with error checking
+;cstruct → Struct definition
+;cboiler → Complete C file template
+```
 
 ## Configuration
 
-### GUI Editor
-Right-click system tray icon > Configure
+### Using GUI Editor
+1. Right-click system tray icon
+2. Click "Configure"
+3. Add, edit, or delete expansions
+4. Changes apply instantly
 
-### Manual Editing
+### Manual Configuration
 Edit `config/expansions.json`:
 
 ```json
 {
-  "trigger": ";hello",
-  "replacement": "Hello, World!",
+  "trigger": ";custom",
+  "replacement": "Your custom text here",
   "case_sensitive": false,
-  "description": "Greeting"
+  "description": "My custom expansion"
 }
 ```
 
-Changes apply automatically.
+### Template Examples
 
-### Template Variables
-
-| Variable | Result |
-|----------|--------|
-| `{DATE}` | Current date (YYYY-MM-DD) |
-| `{TIME}` | Current time (HH:MM:SS) |
-| `{DATETIME}` | Date and time |
-| `{CLIPBOARD}` | Clipboard contents |
-| `{CURSOR}` | Cursor position marker |
-
-Example:
+**Meeting notes:**
 ```json
 {
   "trigger": ";meeting",
-  "replacement": "Meeting notes for {DATE}:\n\n{CURSOR}"
+  "replacement": "Meeting Notes - {DATE}\n\nAttendees:\n- \n\nAgenda:\n- \n\nAction Items:\n- {CURSOR}"
+}
+```
+
+**Email template:**
+```json
+{
+  "trigger": ";followup",
+  "replacement": "Hi,\n\nFollowing up on our conversation from {DATE}.\n\n{CURSOR}\n\nBest regards,"
 }
 ```
 
 ## System Tray Menu
 
-- Enable/Disable - Toggle expansions
-- Configure - Open GUI editor
-- Statistics - View usage stats
-- View Logs - Open log file
-- Reload Configuration - Refresh config
-- About - Version information
-- Quit - Exit application
+- **Enable/Disable** - Toggle expansions on/off
+- **Configure** - Open GUI editor
+- **Statistics** - View expansion usage
+- **View Logs** - Open activity log
+- **Reload Configuration** - Refresh config
+- **About** - Version information
+- **Quit** - Exit application
 
-## Project Structure
+## Usage Tips
 
-```
-Text-expander-main/
-├── Launch-TextExpander.vbs    # Silent launcher
-├── setup-auto-start.ps1        # Auto-start configuration
-├── TextExpander.exe            # Main application
-├── README.md                   # Documentation
-├── LICENSE                     # MIT License
-├── config/
-│   └── expansions.json         # Expansion definitions
-├── logs/
-│   └── expander.log           # Activity log
-├── main.go                     # Source code
-├── expander/                   # Core engine
-├── gui/                        # GUI editor
-└── utils/                      # Utilities
-```
+**Trigger Keys:**
+- Space (recommended)
+- Tab
+- Enter
 
-## Sharing the Application
+**Best Practices:**
+1. Use consistent prefix (`;` semicolon recommended)
+2. Keep triggers short and memorable
+3. Use descriptive names (`;pydef` not `;pd`)
+4. Test new expansions in Notepad first
+5. Back up `config/expansions.json` before major changes
 
-### Simple Method
-1. Create a folder containing:
-   - `TextExpander.exe`
-   - `Launch-TextExpander.vbs`
-   - `config/` folder
-   - `setup-auto-start.ps1`
-   - `README.md`
+**Personalizing:**
+1. Edit `;email`, `;phone`, `;addr` with your information
+2. Update `;sig` with your signature
+3. Add company-specific templates
+4. Create project-specific snippets
 
-2. Compress to ZIP
+## Sharing Configurations
 
-3. Share via email, cloud storage, or USB drive
+**Export your expansions:**
+1. Copy `config/expansions.json`
+2. Share with team/friends
+3. They replace their config file
 
-### Privacy
-Before sharing, review `config/expansions.json` and remove:
+**Remove sensitive data first:**
 - Personal email addresses
 - Phone numbers
-- Private information
+- Private addresses
+- Passwords or API keys
 
-## Development
+## Troubleshooting
 
-### Requirements
-- Go 1.21+
-- 64-bit MinGW-w64 compiler (Windows)
+**Expansions not working:**
+- Check system tray icon shows "Enabled"
+- Verify spelling of trigger
+- Press Space/Tab/Enter after trigger
+- Check `logs/expander.log` for errors
 
-### Building
+**Application not starting:**
+- Use `Launch-TextExpander.vbs` (not .exe directly)
+- Check Task Manager for existing process
+- Review `logs/expander.log`
+
+**System tray icon missing:**
+- Click arrow (^) in system tray
+- Icon may be in hidden icons area
+
+**Terminal closes application:**
+- Always use `Launch-TextExpander.vbs`
+- Avoid `go run main.go` for regular use
+- Runs silently in background
+
+## Uninstallation
+
+**If installed via installer:**
+1. Windows Settings > Apps
+2. Find "Text Expander"
+3. Click Uninstall
+4. Confirm removal
+
+**If portable:**
+1. Delete application folder
+2. Remove auto-start shortcut from:
+   `C:\Users\YourName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`
+
+## Building from Source
+
+**Requirements:**
+- Go 1.21 or later
+- 64-bit MinGW-w64 (Windows)
+
+**Build steps:**
 ```bash
+# Clone repository
+git clone https://github.com/yourusername/Text-Expander.git
+cd Text-Expander
+
 # Install dependencies
 go mod tidy
 
-# Build
-go build -o TextExpander.exe main.go
+# Build executable
+go build -ldflags="-H=windowsgui" -o TextExpander.exe main.go
 
 # Run tests
 go test ./...
 ```
 
-### Source Structure
+**Build installer:**
+```powershell
+# Requires Inno Setup: https://jrsoftware.org/isdl.php
+.\build-installer.ps1
 ```
-├── main.go              # Entry point, system tray
-├── expander/
-│   ├── expander.go      # Expansion engine
-│   ├── buffer.go        # Input buffer
-│   ├── keyboard.go      # Keyboard hooks
-│   └── template.go      # Variable processing
+
+Output: `dist/TextExpander-Setup-1.1.0.exe`
+
+## Project Structure
+
+```
+Text-expander-main/
+├── TextExpander.exe           # Main application
+├── Launch-TextExpander.vbs    # Silent launcher
+├── setup-auto-start.ps1       # Auto-start configuration
+├── build-installer.ps1        # Build installer script
+├── README.md                  # Documentation
+├── LICENSE                    # MIT License
 ├── config/
-│   └── config.go        # Configuration management
-├── gui/
-│   └── editor.go        # GUI editor
-└── utils/
-    ├── logger.go        # Logging
-    └── security.go      # Security checks
+│   └── expansions.json        # Expansion definitions (144+)
+├── installer/
+│   └── setup.iss              # Inno Setup script
+├── logs/
+│   └── expander.log          # Activity log
+├── main.go                    # Application entry point
+├── expander/                  # Core expansion engine
+├── gui/                       # GUI editor & notifications
+└── utils/                     # Logging & utilities
 ```
-
-## Troubleshooting
-
-**Expansions not working**
-- Check system tray icon shows "Enabled"
-- Verify trigger spelling
-- Ensure Space/Tab/Enter pressed after trigger
-- Review `logs/expander.log`
-
-**System tray icon not visible**
-- Click arrow (^) in system tray to show hidden icons
-- Check Task Manager for running process
-
-**Application closes when terminal closes**
-- Use `Launch-TextExpander.vbs` instead of running executable directly
-- Avoid `go run main.go` for regular use
 
 ## License
 
-MIT License - See LICENSE file for details
+MIT License - See [LICENSE](LICENSE) file for details.
 
-## Expansion Categories
+## Support
 
-- Personal Information (8 expansions)
-- Python (9 expansions)
-- JavaScript (12 expansions)
-- Go (10 expansions)
-- C (12 expansions)
-- HTML (8 expansions)
-- CSS (5 expansions)
-- SQL (29 expansions)
-- Git (7 expansions)
-- Symbols (15+ expansions)
-- Professional Templates (6 expansions)
+**Issues:** Report bugs via GitHub Issues  
+**Documentation:** See this README  
+**Logs:** Check `logs/expander.log` for debugging
 
-Total: 144+ ready-to-use expansions
+## Version
+
+Current version: **1.1.0**
+
+**Changelog:**
+- 144+ total expansions (24 SQL additions)
+- Category system for organization
+- First-run welcome experience
+- Toast notifications for visual feedback
+- Professional installer with auto-start option
