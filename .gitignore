@@ -55,3 +55,6 @@ desktop.ini
 # Keep app icons
 !app-icon.ico
 !app-icon.png
+
+# Build output (installer should go to GitHub Releases, not repository)
+dist/
